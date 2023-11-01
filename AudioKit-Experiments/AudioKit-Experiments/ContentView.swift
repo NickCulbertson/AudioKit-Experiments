@@ -11,12 +11,18 @@ struct MasterView: View {
         Form {
             Section(header: Text("Demos")) {
                 Group {
-                    Text("Coming Soon...")
-//                    NavigationLink("1. Drum Pads", destination: DrumPads())
+                    NavigationLink("1. SoundFont Player", destination: SoundFontView())
+//                    NavigationLink("2. Visualizer", destination: VisualizerView())
                 }
             }
         }.navigationBarTitle("AudioKit Experiments")
     }
+}
+
+extension NSNotification.Name {
+    static let keyNoteOn = Notification.Name("keyNoteOn")
+    static let keyNoteOff = Notification.Name("keyNoteOff")
+    static let MIDIKey = Notification.Name("MIDIKey")
 }
 
 #Preview {

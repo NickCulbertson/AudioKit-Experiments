@@ -15,6 +15,15 @@
 		5A2B88B92AF1479300366695 /* AudioKit_ExperimentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B88B82AF1479300366695 /* AudioKit_ExperimentsUITests.swift */; };
 		5A2B88BB2AF1479300366695 /* AudioKit_ExperimentsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B88BA2AF1479300366695 /* AudioKit_ExperimentsUITestsLaunchTests.swift */; };
 		5A2B88C92AF1483700366695 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5A2B88C82AF1483700366695 /* AudioKit */; };
+		5A2B88CB2AF1548D00366695 /* SwiftUIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B88CA2AF1548D00366695 /* SwiftUIElements.swift */; };
+		5A2B88CE2AF154B200366695 /* Keyboard in Frameworks */ = {isa = PBXBuildFile; productRef = 5A2B88CD2AF154B200366695 /* Keyboard */; };
+		5A2B88D12AF1555100366695 /* SoundFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B88CF2AF1555100366695 /* SoundFont.swift */; };
+		5A2B88D52AF1558B00366695 /* MIDIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5A2B88D42AF1558B00366695 /* MIDIKit */; };
+		5A2B88D92AF1565E00366695 /* AudioKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5A2B88D82AF1565E00366695 /* AudioKitUI */; };
+		5A2B88DB2AF157D100366695 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 5A2B88DA2AF157D100366695 /* Sounds */; };
+		5ACD75832AF16D3D000E0A0E /* SoundFont+MIDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD75822AF16D3D000E0A0E /* SoundFont+MIDI.swift */; };
+		5ACD75862AF17EE5000E0A0E /* Visualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD75852AF17EE5000E0A0E /* Visualizer.swift */; };
+		5ACD75882AF1822A000E0A0E /* FFTView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD75872AF1822A000E0A0E /* FFTView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +54,14 @@
 		5A2B88B42AF1479300366695 /* AudioKit-ExperimentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AudioKit-ExperimentsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2B88B82AF1479300366695 /* AudioKit_ExperimentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioKit_ExperimentsUITests.swift; sourceTree = "<group>"; };
 		5A2B88BA2AF1479300366695 /* AudioKit_ExperimentsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioKit_ExperimentsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5A2B88CA2AF1548D00366695 /* SwiftUIElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIElements.swift; sourceTree = "<group>"; };
+		5A2B88CF2AF1555100366695 /* SoundFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundFont.swift; sourceTree = "<group>"; };
+		5A2B88D62AF155C500366695 /* AudioKit-Experiments.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AudioKit-Experiments.entitlements"; sourceTree = "<group>"; };
+		5A2B88DA2AF157D100366695 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		5ACD75812AF16286000E0A0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5ACD75822AF16D3D000E0A0E /* SoundFont+MIDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SoundFont+MIDI.swift"; sourceTree = "<group>"; };
+		5ACD75852AF17EE5000E0A0E /* Visualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visualizer.swift; sourceTree = "<group>"; };
+		5ACD75872AF1822A000E0A0E /* FFTView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +69,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A2B88D52AF1558B00366695 /* MIDIKit in Frameworks */,
 				5A2B88C92AF1483700366695 /* AudioKit in Frameworks */,
+				5A2B88D92AF1565E00366695 /* AudioKitUI in Frameworks */,
+				5A2B88CE2AF154B200366695 /* Keyboard in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +96,7 @@
 		5A2B88912AF1479100366695 = {
 			isa = PBXGroup;
 			children = (
+				5A2B88DA2AF157D100366695 /* Sounds */,
 				5A2B889C2AF1479100366695 /* AudioKit-Experiments */,
 				5A2B88AD2AF1479300366695 /* AudioKit-ExperimentsTests */,
 				5A2B88B72AF1479300366695 /* AudioKit-ExperimentsUITests */,
@@ -96,8 +117,12 @@
 		5A2B889C2AF1479100366695 /* AudioKit-Experiments */ = {
 			isa = PBXGroup;
 			children = (
+				5ACD75812AF16286000E0A0E /* Info.plist */,
+				5A2B88D62AF155C500366695 /* AudioKit-Experiments.entitlements */,
 				5A2B889D2AF1479100366695 /* AudioKit_ExperimentsApp.swift */,
 				5A2B889F2AF1479100366695 /* ContentView.swift */,
+				5ACD75842AF16DD0000E0A0E /* Examples */,
+				5A2B88CA2AF1548D00366695 /* SwiftUIElements.swift */,
 				5A2B88A12AF1479200366695 /* Assets.xcassets */,
 				5A2B88A32AF1479200366695 /* Preview Content */,
 			);
@@ -129,6 +154,17 @@
 			path = "AudioKit-ExperimentsUITests";
 			sourceTree = "<group>";
 		};
+		5ACD75842AF16DD0000E0A0E /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				5A2B88CF2AF1555100366695 /* SoundFont.swift */,
+				5ACD75822AF16D3D000E0A0E /* SoundFont+MIDI.swift */,
+				5ACD75852AF17EE5000E0A0E /* Visualizer.swift */,
+				5ACD75872AF1822A000E0A0E /* FFTView2.swift */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +183,9 @@
 			name = "AudioKit-Experiments";
 			packageProductDependencies = (
 				5A2B88C82AF1483700366695 /* AudioKit */,
+				5A2B88CD2AF154B200366695 /* Keyboard */,
+				5A2B88D42AF1558B00366695 /* MIDIKit */,
+				5A2B88D82AF1565E00366695 /* AudioKitUI */,
 			);
 			productName = "AudioKit-Experiments";
 			productReference = 5A2B889A2AF1479100366695 /* AudioKit-Experiments.app */;
@@ -222,6 +261,9 @@
 			mainGroup = 5A2B88912AF1479100366695;
 			packageReferences = (
 				5A2B88C72AF1483700366695 /* XCRemoteSwiftPackageReference "AudioKit" */,
+				5A2B88CC2AF154B200366695 /* XCRemoteSwiftPackageReference "Keyboard" */,
+				5A2B88D32AF1558B00366695 /* XCRemoteSwiftPackageReference "MIDIKit" */,
+				5A2B88D72AF1565E00366695 /* XCRemoteSwiftPackageReference "AudioKitUI" */,
 			);
 			productRefGroup = 5A2B889B2AF1479100366695 /* Products */;
 			projectDirPath = "";
@@ -239,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A2B88DB2AF157D100366695 /* Sounds in Resources */,
 				5A2B88A52AF1479200366695 /* Preview Assets.xcassets in Resources */,
 				5A2B88A22AF1479200366695 /* Assets.xcassets in Resources */,
 			);
@@ -266,7 +309,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A2B88A02AF1479100366695 /* ContentView.swift in Sources */,
+				5A2B88D12AF1555100366695 /* SoundFont.swift in Sources */,
 				5A2B889E2AF1479100366695 /* AudioKit_ExperimentsApp.swift in Sources */,
+				5ACD75832AF16D3D000E0A0E /* SoundFont+MIDI.swift in Sources */,
+				5A2B88CB2AF1548D00366695 /* SwiftUIElements.swift in Sources */,
+				5ACD75882AF1822A000E0A0E /* FFTView2.swift in Sources */,
+				5ACD75862AF17EE5000E0A0E /* Visualizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,12 +475,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "AudioKit-Experiments/AudioKit-Experiments.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AudioKit-Experiments/Preview Content\"";
 				DEVELOPMENT_TEAM = R6J85WRCEG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AudioKit-Experiments/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "AudioKit Experiments";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -445,6 +496,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MobyPixel.AudioKit-Experiments";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -456,12 +510,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "AudioKit-Experiments/AudioKit-Experiments.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AudioKit-Experiments/Preview Content\"";
 				DEVELOPMENT_TEAM = R6J85WRCEG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AudioKit-Experiments/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "AudioKit Experiments";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -474,6 +531,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MobyPixel.AudioKit-Experiments";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -606,6 +666,30 @@
 				minimumVersion = 5.6.2;
 			};
 		};
+		5A2B88CC2AF154B200366695 /* XCRemoteSwiftPackageReference "Keyboard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/Keyboard";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.6;
+			};
+		};
+		5A2B88D32AF1558B00366695 /* XCRemoteSwiftPackageReference "MIDIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/orchetect/MIDIKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.3;
+			};
+		};
+		5A2B88D72AF1565E00366695 /* XCRemoteSwiftPackageReference "AudioKitUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKitUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -613,6 +697,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5A2B88C72AF1483700366695 /* XCRemoteSwiftPackageReference "AudioKit" */;
 			productName = AudioKit;
+		};
+		5A2B88CD2AF154B200366695 /* Keyboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A2B88CC2AF154B200366695 /* XCRemoteSwiftPackageReference "Keyboard" */;
+			productName = Keyboard;
+		};
+		5A2B88D42AF1558B00366695 /* MIDIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A2B88D32AF1558B00366695 /* XCRemoteSwiftPackageReference "MIDIKit" */;
+			productName = MIDIKit;
+		};
+		5A2B88D82AF1565E00366695 /* AudioKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A2B88D72AF1565E00366695 /* XCRemoteSwiftPackageReference "AudioKitUI" */;
+			productName = AudioKitUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
