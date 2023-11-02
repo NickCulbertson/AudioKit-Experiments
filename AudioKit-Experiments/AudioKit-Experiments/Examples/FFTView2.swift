@@ -123,39 +123,84 @@ public struct FFTView2: View {
     }
 
     @State private var degress: Double = 0
+    @State private var isRotating = 0.0
+    @State var currentDate = Date.now
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
     public var body: some View {
-        ZStack() {
-            
-            ForEach(0 ..< barCount, id: \.self) { i in
-                if i < fft.amplitudes.count {
-                    if let amplitude = fft.amplitudes[i] {
-                        
-                        
-                            AmplitudeBar2(amplitude: amplitude,
+        
+        GeometryReader { geometry in
+            if !placeMiddle {
+                ZStack() {
+                    
+                    ForEach(0 ..< barCount, id: \.self) { i in
+                        if i < fft.amplitudes.count {
+                            if let amplitude = fft.amplitudes[i] {
+                                
+                                
+                                AmplitudeBar2(amplitude: amplitude,
+                                              barCount: barCount,
+                                              barColor: barColor,
+                                              paddingFraction: paddingFraction,
+                                              placeMiddle: placeMiddle)
+                                .rotationEffect(.degrees(Double(i)/Double(barCount)*360.0), anchor: .center)
+                                
+                                
+                                
+                            }
+                        } else {
+                            AmplitudeBar2(amplitude: 0.0,
+                                          barCount: barCount,
                                           barColor: barColor,
                                           paddingFraction: paddingFraction,
-                                          placeMiddle: placeMiddle)
-                            .rotationEffect(.degrees(Double(i)/Double(barCount)*360.0), anchor: .center)
-                            
-                        
-                        
+                                          placeMiddle: placeMiddle,
+                                          backgroundColor: backgroundColor)
+                        }
                     }
-                } else {
-                    AmplitudeBar2(amplitude: 0.0,
-                                  barColor: barColor,
-                                  paddingFraction: paddingFraction,
-                                  placeMiddle: placeMiddle,
-                                  backgroundColor: backgroundColor)
-                }
+                }.padding(geometry.size.width*0.35)
+                    
+            } else {
+                HStack(spacing: 0) {
+                    
+                    ForEach(0 ..< barCount, id: \.self) { i in
+                        if i < fft.amplitudes.count {
+                            if let amplitude = fft.amplitudes[i] {
+                                
+                                //barColor opacity set by amplitude
+                                AmplitudeBar2(amplitude: amplitude,
+                                              barCount: barCount,
+                                              barColor: barColor.opacity(Double(amplitude)*0.8),
+                                              paddingFraction: paddingFraction,
+                                              placeMiddle: placeMiddle)
+                                
+                                
+                                
+                            }
+                        } else {
+                            AmplitudeBar2(amplitude: 0.0,
+                                          barCount: barCount,
+                                          barColor: barColor,
+                                          paddingFraction: paddingFraction,
+                                          placeMiddle: placeMiddle,
+                                          backgroundColor: backgroundColor)
+                        }
+                    }
+                }.padding(20)
             }
-        
-                }.padding(400)
-        
+        }.onReceive(timer) {_ in
+            isRotating += 2
+                    }
+        .rotationEffect(.degrees(placeMiddle ? 0 :isRotating))
+        .animation(.linear(duration: 1), value: isRotating)
+            
         
         .onAppear {
             fft.updateNode(node, fftValidBinCount: self.fftValidBinCount)
             fft.maxAmplitude = self.maxAmplitude
             fft.minAmplitude = self.minAmplitude
+        }
+        .onDisappear() {
+            timer.upstream.connect().cancel()
         }
         .drawingGroup() // Metal powered rendering
 //        .background(backgroundColor)
@@ -164,9 +209,10 @@ public struct FFTView2: View {
 
 struct AmplitudeBar2: View {
     var amplitude: Float
+    var barCount: Int
     var barColor: Color
     var paddingFraction: CGFloat = 0.2
-    var placeMiddle: Bool = true
+    var placeMiddle: Bool = false
     var backgroundColor: Color = .black
 
     var body: some View {
@@ -176,17 +222,18 @@ struct AmplitudeBar2: View {
                 VStack{
                     Spacer()
                     Rectangle()
-                        .fill(.white)
-                        .cornerRadius(5.0)
+                        .fill(barColor)
+                        .cornerRadius(3.0)
 
-                        .frame(height: geometry.size.height * CGFloat(amplitude) * 0.2)
+                        .frame(height: geometry.size.height * CGFloat(amplitude) * 0.4)
                         .animation(.easeOut(duration: 0.15), value: amplitude)
+                        .shadow(color: .white.opacity(0.5), radius: 20)
                     if placeMiddle {
                         Spacer()
                     }
                 }
-                .rotationEffect(.degrees(225), anchor: .bottom)
-            }.frame(width:20)
+                .rotationEffect(.degrees(placeMiddle ? 0 : 225), anchor: .bottom)
+            }.frame(maxWidth:placeMiddle ? 100 : geometry.size.width/CGFloat(barCount)*2.5)
             .padding(geometry.size.width * paddingFraction / 2)
         }
     }

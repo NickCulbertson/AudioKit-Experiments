@@ -12,7 +12,8 @@ struct MasterView: View {
             Section(header: Text("Demos")) {
                 Group {
                     NavigationLink("1. SoundFont Player", destination: SoundFontView())
-//                    NavigationLink("2. Visualizer", destination: VisualizerView())
+                    NavigationLink("2. Circular Visualizer", destination: CircularVisualizerView())
+                    NavigationLink("3. Linear Visualizer", destination: LinearVisualizerView())
                 }
             }
         }.navigationBarTitle("AudioKit Experiments")
