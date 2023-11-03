@@ -124,6 +124,7 @@
 				5A2B889D2AF1479100366695 /* AudioKit_ExperimentsApp.swift */,
 				5A2B889F2AF1479100366695 /* ContentView.swift */,
 				5ACD75842AF16DD0000E0A0E /* Examples */,
+				5ACD75872AF1822A000E0A0E /* FFTView2.swift */,
 				5A2B88CA2AF1548D00366695 /* SwiftUIElements.swift */,
 				5A2B88A12AF1479200366695 /* Assets.xcassets */,
 				5A2B88A32AF1479200366695 /* Preview Content */,
@@ -163,7 +164,6 @@
 				5ACD75822AF16D3D000E0A0E /* SoundFont+MIDI.swift */,
 				5ACD75892AF456FB000E0A0E /* LinearVisualizer.swift */,
 				5ACD75852AF17EE5000E0A0E /* CircularVisualizer.swift */,
-				5ACD75872AF1822A000E0A0E /* FFTView2.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";

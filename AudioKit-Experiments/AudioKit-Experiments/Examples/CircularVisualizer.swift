@@ -45,7 +45,7 @@ struct CircularVisualizerView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .opacity(0.4)
-                FFTView2(conductor.engine.output!, barColor: .white.opacity(0.75), placeMiddle: false, barCount: 80, minAmplitude: -120).aspectRatio(contentMode: .fit)
+                FFTView2(conductor.engine.output!, barColor: .white.opacity(0.75), placeMiddle: false, barCount: 100, minAmplitude: -130).aspectRatio(contentMode: .fit)
             }
         }
         .onAppear {
