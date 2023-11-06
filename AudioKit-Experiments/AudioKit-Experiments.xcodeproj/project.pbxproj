@@ -25,6 +25,12 @@
 		5ACD75862AF17EE5000E0A0E /* CircularVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD75852AF17EE5000E0A0E /* CircularVisualizer.swift */; };
 		5ACD75882AF1822A000E0A0E /* FFTView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD75872AF1822A000E0A0E /* FFTView2.swift */; };
 		5ACD758A2AF456FB000E0A0E /* LinearVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD75892AF456FB000E0A0E /* LinearVisualizer.swift */; };
+		5ACD758C2AF53E21000E0A0E /* NodeRecorder2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD758B2AF53E21000E0A0E /* NodeRecorder2.swift */; };
+		5ACD758E2AF53E34000E0A0E /* RecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD758D2AF53E34000E0A0E /* RecorderView.swift */; };
+		5ACD75912AF53E49000E0A0E /* AudioKitEX in Frameworks */ = {isa = PBXBuildFile; productRef = 5ACD75902AF53E49000E0A0E /* AudioKitEX */; };
+		5ACD75942AF53E57000E0A0E /* Waveform in Frameworks */ = {isa = PBXBuildFile; productRef = 5ACD75932AF53E57000E0A0E /* Waveform */; };
+		5ACD75982AF57A4C000E0A0E /* SpriteSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD75972AF57A4C000E0A0E /* SpriteSound.swift */; };
+		5ACD759B2AF85C6F000E0A0E /* LFOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD759A2AF85C6F000E0A0E /* LFOView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +70,10 @@
 		5ACD75852AF17EE5000E0A0E /* CircularVisualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularVisualizer.swift; sourceTree = "<group>"; };
 		5ACD75872AF1822A000E0A0E /* FFTView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTView2.swift; sourceTree = "<group>"; };
 		5ACD75892AF456FB000E0A0E /* LinearVisualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearVisualizer.swift; sourceTree = "<group>"; };
+		5ACD758B2AF53E21000E0A0E /* NodeRecorder2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeRecorder2.swift; sourceTree = "<group>"; };
+		5ACD758D2AF53E34000E0A0E /* RecorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecorderView.swift; sourceTree = "<group>"; };
+		5ACD75972AF57A4C000E0A0E /* SpriteSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpriteSound.swift; path = "AudioKit-Experiments/Examples/SpriteSound.swift"; sourceTree = SOURCE_ROOT; };
+		5ACD759A2AF85C6F000E0A0E /* LFOView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFOView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +82,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A2B88D52AF1558B00366695 /* MIDIKit in Frameworks */,
+				5ACD75942AF53E57000E0A0E /* Waveform in Frameworks */,
+				5ACD75912AF53E49000E0A0E /* AudioKitEX in Frameworks */,
 				5A2B88C92AF1483700366695 /* AudioKit in Frameworks */,
 				5A2B88D92AF1565E00366695 /* AudioKitUI in Frameworks */,
 				5A2B88CE2AF154B200366695 /* Keyboard in Frameworks */,
@@ -125,6 +137,7 @@
 				5A2B889F2AF1479100366695 /* ContentView.swift */,
 				5ACD75842AF16DD0000E0A0E /* Examples */,
 				5ACD75872AF1822A000E0A0E /* FFTView2.swift */,
+				5ACD758B2AF53E21000E0A0E /* NodeRecorder2.swift */,
 				5A2B88CA2AF1548D00366695 /* SwiftUIElements.swift */,
 				5A2B88A12AF1479200366695 /* Assets.xcassets */,
 				5A2B88A32AF1479200366695 /* Preview Content */,
@@ -164,6 +177,9 @@
 				5ACD75822AF16D3D000E0A0E /* SoundFont+MIDI.swift */,
 				5ACD75892AF456FB000E0A0E /* LinearVisualizer.swift */,
 				5ACD75852AF17EE5000E0A0E /* CircularVisualizer.swift */,
+				5ACD75972AF57A4C000E0A0E /* SpriteSound.swift */,
+				5ACD758D2AF53E34000E0A0E /* RecorderView.swift */,
+				5ACD759A2AF85C6F000E0A0E /* LFOView.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -189,6 +205,8 @@
 				5A2B88CD2AF154B200366695 /* Keyboard */,
 				5A2B88D42AF1558B00366695 /* MIDIKit */,
 				5A2B88D82AF1565E00366695 /* AudioKitUI */,
+				5ACD75902AF53E49000E0A0E /* AudioKitEX */,
+				5ACD75932AF53E57000E0A0E /* Waveform */,
 			);
 			productName = "AudioKit-Experiments";
 			productReference = 5A2B889A2AF1479100366695 /* AudioKit-Experiments.app */;
@@ -267,6 +285,8 @@
 				5A2B88CC2AF154B200366695 /* XCRemoteSwiftPackageReference "Keyboard" */,
 				5A2B88D32AF1558B00366695 /* XCRemoteSwiftPackageReference "MIDIKit" */,
 				5A2B88D72AF1565E00366695 /* XCRemoteSwiftPackageReference "AudioKitUI" */,
+				5ACD758F2AF53E49000E0A0E /* XCRemoteSwiftPackageReference "AudioKitEX" */,
+				5ACD75922AF53E57000E0A0E /* XCRemoteSwiftPackageReference "Waveform" */,
 			);
 			productRefGroup = 5A2B889B2AF1479100366695 /* Products */;
 			projectDirPath = "";
@@ -311,11 +331,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ACD758C2AF53E21000E0A0E /* NodeRecorder2.swift in Sources */,
 				5A2B88A02AF1479100366695 /* ContentView.swift in Sources */,
 				5A2B88D12AF1555100366695 /* SoundFont.swift in Sources */,
 				5ACD758A2AF456FB000E0A0E /* LinearVisualizer.swift in Sources */,
+				5ACD75982AF57A4C000E0A0E /* SpriteSound.swift in Sources */,
 				5A2B889E2AF1479100366695 /* AudioKit_ExperimentsApp.swift in Sources */,
 				5ACD75832AF16D3D000E0A0E /* SoundFont+MIDI.swift in Sources */,
+				5ACD758E2AF53E34000E0A0E /* RecorderView.swift in Sources */,
+				5ACD759B2AF85C6F000E0A0E /* LFOView.swift in Sources */,
 				5A2B88CB2AF1548D00366695 /* SwiftUIElements.swift in Sources */,
 				5ACD75882AF1822A000E0A0E /* FFTView2.swift in Sources */,
 				5ACD75862AF17EE5000E0A0E /* CircularVisualizer.swift in Sources */,
@@ -484,15 +508,17 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AudioKit-Experiments/Preview Content\"";
 				DEVELOPMENT_TEAM = R6J85WRCEG;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AudioKit-Experiments/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "AudioKit Experiments";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We use the microphone to record samples.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -519,15 +545,17 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AudioKit-Experiments/Preview Content\"";
 				DEVELOPMENT_TEAM = R6J85WRCEG;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AudioKit-Experiments/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "AudioKit Experiments";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We use the microphone to record samples.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -694,6 +722,22 @@
 				minimumVersion = 0.3.6;
 			};
 		};
+		5ACD758F2AF53E49000E0A0E /* XCRemoteSwiftPackageReference "AudioKitEX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKitEX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+		5ACD75922AF53E57000E0A0E /* XCRemoteSwiftPackageReference "Waveform" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/Waveform";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -716,6 +760,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5A2B88D72AF1565E00366695 /* XCRemoteSwiftPackageReference "AudioKitUI" */;
 			productName = AudioKitUI;
+		};
+		5ACD75902AF53E49000E0A0E /* AudioKitEX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5ACD758F2AF53E49000E0A0E /* XCRemoteSwiftPackageReference "AudioKitEX" */;
+			productName = AudioKitEX;
+		};
+		5ACD75932AF53E57000E0A0E /* Waveform */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5ACD75922AF53E57000E0A0E /* XCRemoteSwiftPackageReference "Waveform" */;
+			productName = Waveform;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

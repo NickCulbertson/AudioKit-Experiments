@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "audiokitex",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AudioKit/AudioKitEX",
+      "state" : {
+        "revision" : "58fa4a002028a2addf96466dd5ad68182e7d387e",
+        "version" : "5.6.0"
+      }
+    },
+    {
       "identity" : "audiokitui",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/AudioKit/AudioKitUI",
@@ -61,6 +70,15 @@
       "state" : {
         "revision" : "bd73003b0e6caa90fb1d71b57329b0d609b097ee",
         "version" : "1.0.10"
+      }
+    },
+    {
+      "identity" : "waveform",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AudioKit/Waveform",
+      "state" : {
+        "revision" : "79103e766434eb32aff9f0b169a469fce0af9ebd",
+        "version" : "1.0.2"
       }
     }
   ],
