@@ -1,4 +1,5 @@
 import AudioKit
+import SporthAudioKit
 import AudioKitUI
 import AVFoundation
 import Keyboard
@@ -25,16 +26,13 @@ class LFOConductor: ObservableObject, HasAudioEngine {
     init() {
         // Make engine connections
         // Engine started in HasAudioEngine
-        engine.output = instrument
-        
-        Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true) { timer in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true) { timer in
             self.tickCount += Double(self.lfoRate)
             self.lfoValue = sin(Double(self.tickCount))*Double(self.lfoAmount)
             print(self.lfoValue)
         }
-    }
-    
-    @objc func update() {
+        
+        engine.output = instrument
         
     }
 }
@@ -43,7 +41,6 @@ struct LFOView: View {
     @StateObject var conductor = LFOConductor()
     var body: some View {
         VStack{
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
             HStack{
                 VStack{
                     Text("Amount: \(conductor.lfoAmount)")

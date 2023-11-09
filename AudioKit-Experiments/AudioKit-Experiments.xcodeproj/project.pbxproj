@@ -31,6 +31,7 @@
 		5ACD75942AF53E57000E0A0E /* Waveform in Frameworks */ = {isa = PBXBuildFile; productRef = 5ACD75932AF53E57000E0A0E /* Waveform */; };
 		5ACD75982AF57A4C000E0A0E /* SpriteSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD75972AF57A4C000E0A0E /* SpriteSound.swift */; };
 		5ACD759B2AF85C6F000E0A0E /* LFOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD759A2AF85C6F000E0A0E /* LFOView.swift */; };
+		5ACD75A02AF9799F000E0A0E /* SporthAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5ACD759F2AF9799F000E0A0E /* SporthAudioKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 				5A2B88C92AF1483700366695 /* AudioKit in Frameworks */,
 				5A2B88D92AF1565E00366695 /* AudioKitUI in Frameworks */,
 				5A2B88CE2AF154B200366695 /* Keyboard in Frameworks */,
+				5ACD75A02AF9799F000E0A0E /* SporthAudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +209,7 @@
 				5A2B88D82AF1565E00366695 /* AudioKitUI */,
 				5ACD75902AF53E49000E0A0E /* AudioKitEX */,
 				5ACD75932AF53E57000E0A0E /* Waveform */,
+				5ACD759F2AF9799F000E0A0E /* SporthAudioKit */,
 			);
 			productName = "AudioKit-Experiments";
 			productReference = 5A2B889A2AF1479100366695 /* AudioKit-Experiments.app */;
@@ -287,6 +290,7 @@
 				5A2B88D72AF1565E00366695 /* XCRemoteSwiftPackageReference "AudioKitUI" */,
 				5ACD758F2AF53E49000E0A0E /* XCRemoteSwiftPackageReference "AudioKitEX" */,
 				5ACD75922AF53E57000E0A0E /* XCRemoteSwiftPackageReference "Waveform" */,
+				5ACD759E2AF9799F000E0A0E /* XCRemoteSwiftPackageReference "SporthAudioKit" */,
 			);
 			productRefGroup = 5A2B889B2AF1479100366695 /* Products */;
 			projectDirPath = "";
@@ -738,6 +742,14 @@
 				minimumVersion = 1.0.2;
 			};
 		};
+		5ACD759E2AF9799F000E0A0E /* XCRemoteSwiftPackageReference "SporthAudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/SporthAudioKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.5.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -770,6 +782,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5ACD75922AF53E57000E0A0E /* XCRemoteSwiftPackageReference "Waveform" */;
 			productName = Waveform;
+		};
+		5ACD759F2AF9799F000E0A0E /* SporthAudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5ACD759E2AF9799F000E0A0E /* XCRemoteSwiftPackageReference "SporthAudioKit" */;
+			productName = SporthAudioKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
