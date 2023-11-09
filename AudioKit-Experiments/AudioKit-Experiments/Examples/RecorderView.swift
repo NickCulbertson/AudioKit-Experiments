@@ -93,9 +93,7 @@ class RecorderViewConductor: ObservableObject, HasAudioEngine {
             print(error)
         }
         print("here")
-        
-        //reading
-        
+                
         do {
             try instrument.loadInstrument(url: (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("myPreset.aupreset"))!)
             instrument.volume = 12
@@ -154,10 +152,6 @@ class RecorderViewConductor: ObservableObject, HasAudioEngine {
         MIDIConnect()
     }
     
-    //    func getDocumentsDirectory() -> URL {
-    //        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-    //        return paths[0]
-    //    }
     func setString() {
         AUString = """
 <?xml version="1.0" encoding="UTF-8"?>
