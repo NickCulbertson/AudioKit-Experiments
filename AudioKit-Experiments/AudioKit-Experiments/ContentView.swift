@@ -16,7 +16,8 @@ struct MasterView: View {
                     NavigationLink("3. Linear Visualizer", destination: LinearVisualizerView())
                     NavigationLink("4. SpriteKit Audio", destination: SpriteSoundView())
                     NavigationLink("5. Sampler Synth", destination: RecordView())
-                    NavigationLink("6. LFOView", destination: LFOView())
+                    NavigationLink("6. LFO Timer", destination: LFOView())
+                    NavigationLink("7. Instrument AUPreset", destination: InstrumentAUPresetView())
                 }
             }
         }.navigationBarTitle("AudioKit Experiments")

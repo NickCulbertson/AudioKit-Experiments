@@ -32,6 +32,8 @@
 		5ACD75982AF57A4C000E0A0E /* SpriteSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD75972AF57A4C000E0A0E /* SpriteSound.swift */; };
 		5ACD759B2AF85C6F000E0A0E /* LFOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD759A2AF85C6F000E0A0E /* LFOView.swift */; };
 		5ACD75A02AF9799F000E0A0E /* SporthAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5ACD759F2AF9799F000E0A0E /* SporthAudioKit */; };
+		5AD948512B01A7C000780DE2 /* InstrumentAUPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD948502B01A7C000780DE2 /* InstrumentAUPreset.swift */; };
+		5AD948552B02B7B200780DE2 /* CookbookKnob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD948542B02B7B200780DE2 /* CookbookKnob.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		5ACD758D2AF53E34000E0A0E /* RecorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecorderView.swift; sourceTree = "<group>"; };
 		5ACD75972AF57A4C000E0A0E /* SpriteSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpriteSound.swift; path = "AudioKit-Experiments/Examples/SpriteSound.swift"; sourceTree = SOURCE_ROOT; };
 		5ACD759A2AF85C6F000E0A0E /* LFOView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFOView.swift; sourceTree = "<group>"; };
+		5AD948502B01A7C000780DE2 /* InstrumentAUPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentAUPreset.swift; sourceTree = "<group>"; };
+		5AD948542B02B7B200780DE2 /* CookbookKnob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookbookKnob.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 				5A2B889F2AF1479100366695 /* ContentView.swift */,
 				5ACD75842AF16DD0000E0A0E /* Examples */,
 				5ACD75872AF1822A000E0A0E /* FFTView2.swift */,
+				5AD948542B02B7B200780DE2 /* CookbookKnob.swift */,
 				5ACD758B2AF53E21000E0A0E /* NodeRecorder2.swift */,
 				5A2B88CA2AF1548D00366695 /* SwiftUIElements.swift */,
 				5A2B88A12AF1479200366695 /* Assets.xcassets */,
@@ -182,6 +187,7 @@
 				5ACD75972AF57A4C000E0A0E /* SpriteSound.swift */,
 				5ACD758D2AF53E34000E0A0E /* RecorderView.swift */,
 				5ACD759A2AF85C6F000E0A0E /* LFOView.swift */,
+				5AD948502B01A7C000780DE2 /* InstrumentAUPreset.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -340,8 +346,10 @@
 				5A2B88D12AF1555100366695 /* SoundFont.swift in Sources */,
 				5ACD758A2AF456FB000E0A0E /* LinearVisualizer.swift in Sources */,
 				5ACD75982AF57A4C000E0A0E /* SpriteSound.swift in Sources */,
+				5AD948512B01A7C000780DE2 /* InstrumentAUPreset.swift in Sources */,
 				5A2B889E2AF1479100366695 /* AudioKit_ExperimentsApp.swift in Sources */,
 				5ACD75832AF16D3D000E0A0E /* SoundFont+MIDI.swift in Sources */,
+				5AD948552B02B7B200780DE2 /* CookbookKnob.swift in Sources */,
 				5ACD758E2AF53E34000E0A0E /* RecorderView.swift in Sources */,
 				5ACD759B2AF85C6F000E0A0E /* LFOView.swift in Sources */,
 				5A2B88CB2AF1548D00366695 /* SwiftUIElements.swift in Sources */,

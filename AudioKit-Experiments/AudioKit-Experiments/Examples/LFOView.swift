@@ -24,8 +24,6 @@ class LFOConductor: ObservableObject, HasAudioEngine {
     }
     
     init() {
-        // Make engine connections
-        // Engine started in HasAudioEngine
         timer = Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true) { timer in
             self.tickCount += Double(self.lfoRate)
             self.lfoValue = sin(Double(self.tickCount))*Double(self.lfoAmount)
