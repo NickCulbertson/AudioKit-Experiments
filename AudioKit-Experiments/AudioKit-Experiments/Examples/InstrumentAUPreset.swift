@@ -21,11 +21,13 @@ class InstrumentAUPresetConductor: ObservableObject, HasAudioEngine {
     
     @Published var resonance : Float = 0.0 {
         didSet{
-//#if os(iOS)
-//            instrument.samplerUnit.setResonance(value: resonance)
-//#else
+#if os(iOS)
+            let value = resonance / 127 * 20 - 3
+            print(value)
+            instrument.samplerUnit.setResonance(value: value)
+#else
             instrument.samplerUnit.sendController(71, withValue: UInt8(resonance), onChannel: 0)
-//#endif
+#endif
         }
     }
     
@@ -49,8 +51,8 @@ class InstrumentAUPresetConductor: ObservableObject, HasAudioEngine {
     
     @Published var sustain : Float = 1.0 {
         didSet{
-            print("log \(log10(sustain*10))")
-            print(sustain)
+//            print("log \(log10(sustain*10))")
+//            print(sustain)
             instrument.samplerUnit.setSustain(value: max(0,log10(sustain*10)))
         }
     }
@@ -106,6 +108,8 @@ class InstrumentAUPresetConductor: ObservableObject, HasAudioEngine {
         } catch {
             Log("Could not load instrument")
         }
+        attack = 0
+        release = 0
         resonance = 0
         cutoff = 127
         
@@ -170,32 +174,23 @@ class InstrumentAUPresetConductor: ObservableObject, HasAudioEngine {
 struct InstrumentAUPresetView: View {
     @StateObject var conductor = InstrumentAUPresetConductor()
     @Environment(\.colorScheme) var colorScheme
-
-    @State private var value1: Float = 0 //res
-    @State private var value2: Float = 127 //cutoff
-    @State private var value3: Float = 0 //attack
-    @State private var value4: Float = 0 //decay
-    @State private var value5: Float = 1 //sustain
-    @State private var value6: Float = 0 //release
-    
     
     var body: some View {
         ZStack{
             FFTView2(conductor.instrument, barColor: .pink, placeMiddle: true, barCount: 40)
             VStack{
                 HStack {
-                    CookbookKnob(text: "Attack", parameter: $conductor.attack, range: 0.0...10.0)
-                    CookbookKnob(text: "Decay", parameter: $conductor.decay, range: 0.0...10.0)
+                    CookbookKnob(text: "Attack", parameter: $conductor.attack, range: 0.0...6.0)
+                    CookbookKnob(text: "Decay", parameter: $conductor.decay, range: 0.0...5.0)
                     CookbookKnob(text: "Sustain", parameter: $conductor.sustain, range: 0.0...1.0)
-                    CookbookKnob(text: "Release", parameter: $conductor.release, range: 0.0...10.0)
-                    
+                    CookbookKnob(text: "Release", parameter: $conductor.release, range: 0.0...8.0)
                 }
                 
                 HStack {
-                    CookbookKnob(text: "Attack", parameter: $conductor.attack2, range: 0.0...10.0)
-                    CookbookKnob(text: "Decay", parameter: $conductor.decay2, range: 0.0...10.0)
+                    CookbookKnob(text: "Attack", parameter: $conductor.attack2, range: 0.0...6.0)
+                    CookbookKnob(text: "Decay", parameter: $conductor.decay2, range: 0.0...5.0)
                     CookbookKnob(text: "Sustain", parameter: $conductor.sustain2, range: 0.0...1.0)
-                    CookbookKnob(text: "Release", parameter: $conductor.release2, range: 0.0...10.0)
+                    CookbookKnob(text: "Release", parameter: $conductor.release2, range: 0.0...8.0)
                     CookbookKnob(text: "Resonance", parameter: $conductor.resonance, range: 0.0...127.0)
                     CookbookKnob(text: "Cutoff", parameter: $conductor.cutoff, range: 0.0...127.0)
                 }
@@ -254,7 +249,7 @@ extension AVAudioUnit {
         let instrument = auAudioUnit.fullState?["Instrument"] as? NSDictionary
         guard let layers = instrument?["Layers"] as? NSArray else { return }
         for layerIndex in 0..<UInt32(layers.count) {
-            var value = value
+            var value = max(0.001, value)
             AudioUnitSetProperty(
                 self.audioUnit,
                 4172,
@@ -305,7 +300,7 @@ extension AVAudioUnit {
         let instrument = auAudioUnit.fullState?["Instrument"] as? NSDictionary
         guard let layers = instrument?["Layers"] as? NSArray else { return }
         for layerIndex in 0..<UInt32(layers.count) {
-            var value = value
+            var value = max(0.001, value)
             AudioUnitSetProperty(
                 self.audioUnit,
                 4175,

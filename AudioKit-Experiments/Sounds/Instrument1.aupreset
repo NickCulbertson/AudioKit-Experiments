@@ -180,6 +180,8 @@
 						<true/>
 						<key>inverse</key>
 						<false/>
+						<key>name</key>
+						<string>Cutoff Knob</string>
 						<key>max value</key>
 						<integer>0</integer>
 						<key>min value</key>
@@ -220,6 +222,8 @@
 						<true/>
 						<key>inverse</key>
 						<true/>
+						<key>name</key>
+						<string>Envelope Gain</string>
 						<key>scale</key>
 						<real>-96</real>
 						<key>source</key>
