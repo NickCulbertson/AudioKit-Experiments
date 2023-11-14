@@ -183,16 +183,15 @@ struct InstrumentAUPresetView: View {
                     CookbookKnob(text: "Decay", parameter: $conductor.decay, range: 0.0...6.0)
                     CookbookKnob(text: "Sustain", parameter: $conductor.sustain, range: 0.0...1.0)
                     CookbookKnob(text: "Release", parameter: $conductor.release, range: 0.0...8.0)
+                    CookbookKnob(text: "Cutoff", parameter: $conductor.cutoff, range: 0.0...127.0)
                 }
-                
                 HStack {
                     CookbookKnob(text: "Attack", parameter: $conductor.attack2, range: 0.0...6.0)
                     CookbookKnob(text: "Decay", parameter: $conductor.decay2, range: 0.0...6.0)
                     CookbookKnob(text: "Sustain", parameter: $conductor.sustain2, range: 0.0...1.0)
                     CookbookKnob(text: "Release", parameter: $conductor.release2, range: 0.0...8.0)
                     CookbookKnob(text: "Resonance", parameter: $conductor.resonance, range: 0.0...127.0)
-                    CookbookKnob(text: "Cutoff", parameter: $conductor.cutoff, range: 0.0...127.0)
-                }
+                }.padding(5)
             }
         }
         SwiftUIKeyboard( firstOctave: 2
