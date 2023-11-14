@@ -131,7 +131,7 @@
 					</dict>
 					<dict>
 						<key>ID</key>
-						<integer>7</integer>
+						<integer>5</integer>
 						<key>control</key>
 						<integer>241</integer>
 						<key>destination</key>
@@ -151,7 +151,7 @@
 					</dict>
 					<dict>
 						<key>ID</key>
-						<integer>8</integer>
+						<integer>6</integer>
 						<key>control</key>
 						<integer>0</integer>
 						<key>destination</key>
@@ -171,7 +171,7 @@
 					</dict>
 					<dict>
 						<key>ID</key>
-						<integer>9</integer>
+						<integer>7</integer>
 						<key>control</key>
 						<integer>0</integer>
 						<key>destination</key>
@@ -193,7 +193,7 @@
 					</dict>
 					<dict>
 						<key>ID</key>
-						<integer>6</integer>
+						<integer>8</integer>
 						<key>control</key>
 						<integer>1</integer>
 						<key>destination</key>
@@ -213,7 +213,7 @@
 					</dict>
 					<dict>
 						<key>ID</key>
-						<integer>5</integer>
+						<integer>9</integer>
 						<key>control</key>
 						<integer>0</integer>
 						<key>destination</key>
@@ -237,26 +237,6 @@
 						<key>control</key>
 						<integer>0</integer>
 						<key>destination</key>
-						<integer>1096810496</integer>
-						<key>enabled</key>
-						<true/>
-						<key>inverse</key>
-						<false/>
-						<key>max value</key>
-						<integer>20</integer>
-						<key>min value</key>
-						<integer>-3</integer>
-						<key>source</key>
-						<integer>71</integer>
-						<key>transform</key>
-						<integer>1</integer>
-					</dict>
-					<dict>
-						<key>ID</key>
-						<integer>11</integer>
-						<key>control</key>
-						<integer>0</integer>
-						<key>destination</key>
 						<integer>1095761920</integer>
 						<key>enabled</key>
 						<true/>
@@ -275,7 +255,7 @@
 					</dict>
 					<dict>
 						<key>ID</key>
-						<integer>12</integer>
+						<integer>11</integer>
 						<key>control</key>
 						<integer>71</integer>
 						<key>destination</key>
@@ -408,7 +388,7 @@
 								<key>stage</key>
 								<integer>5</integer>
 								<key>time</key>
-								<real>0</real>
+								<integer>8</integer>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -432,7 +412,7 @@
 					<key>enabled</key>
 					<true/>
 					<key>resonance</key>
-					<real>-3</real>
+					<integer>-3</integer>
 				</dict>
 				<key>ID</key>
 				<integer>0</integer>

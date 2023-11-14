@@ -21,12 +21,12 @@ class InstrumentAUPresetConductor: ObservableObject, HasAudioEngine {
     
     @Published var resonance : Float = 0.0 {
         didSet{
-#if os(iOS)
-            let value = resonance / 127 * 20 - 3
+#if targetEnvironment(macCatalyst)
+            instrument.samplerUnit.sendController(71, withValue: UInt8(resonance), onChannel: 0)
+#else
+            let value = resonance / 127 * 25 - 3
             print(value)
             instrument.samplerUnit.setResonance(value: value)
-#else
-            instrument.samplerUnit.sendController(71, withValue: UInt8(resonance), onChannel: 0)
 #endif
         }
     }
@@ -49,11 +49,12 @@ class InstrumentAUPresetConductor: ObservableObject, HasAudioEngine {
         }
     }
     
+    
     @Published var sustain : Float = 1.0 {
         didSet{
-//            print("log \(log10(sustain*10))")
+//            print("log \(log(sustain*1000)/log(1000))")
 //            print(sustain)
-            instrument.samplerUnit.setSustain(value: max(0,log10(sustain*10)))
+            instrument.samplerUnit.setSustain(value: max(0,log(sustain*1000)/log(1000)))
         }
     }
     
@@ -77,13 +78,11 @@ class InstrumentAUPresetConductor: ObservableObject, HasAudioEngine {
     
     @Published var sustain2 : Float = 1.0 {
         didSet{
-            print("log \(log10(sustain*10))")
-            print(sustain)
             instrument.samplerUnit.setSustain2(value: max(0,log10(sustain2*10)))
         }
     }
     
-    @Published var release2 : Float = 0.0 {
+    @Published var release2 : Float = 8.0 {
         didSet{
             instrument.samplerUnit.setRelease2(value: release2)
         }
@@ -181,14 +180,14 @@ struct InstrumentAUPresetView: View {
             VStack{
                 HStack {
                     CookbookKnob(text: "Attack", parameter: $conductor.attack, range: 0.0...6.0)
-                    CookbookKnob(text: "Decay", parameter: $conductor.decay, range: 0.0...5.0)
+                    CookbookKnob(text: "Decay", parameter: $conductor.decay, range: 0.0...6.0)
                     CookbookKnob(text: "Sustain", parameter: $conductor.sustain, range: 0.0...1.0)
                     CookbookKnob(text: "Release", parameter: $conductor.release, range: 0.0...8.0)
                 }
                 
                 HStack {
                     CookbookKnob(text: "Attack", parameter: $conductor.attack2, range: 0.0...6.0)
-                    CookbookKnob(text: "Decay", parameter: $conductor.decay2, range: 0.0...5.0)
+                    CookbookKnob(text: "Decay", parameter: $conductor.decay2, range: 0.0...6.0)
                     CookbookKnob(text: "Sustain", parameter: $conductor.sustain2, range: 0.0...1.0)
                     CookbookKnob(text: "Release", parameter: $conductor.release2, range: 0.0...8.0)
                     CookbookKnob(text: "Resonance", parameter: $conductor.resonance, range: 0.0...127.0)
