@@ -19,7 +19,7 @@ class SoundFontConductor: ObservableObject, HasAudioEngine {
     )
     
     func noteOn(pitch: Pitch, point _: CGPoint) {
-        instrument.play(noteNumber: MIDINoteNumber(pitch.midiNoteNumber), velocity: 90, channel: 0)
+        instrument.play(noteNumber: MIDINoteNumber(pitch.midiNoteNumber), velocity: 120, channel: 0)
     }
     
     func noteOff(pitch: Pitch) {

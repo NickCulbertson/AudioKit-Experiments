@@ -89,7 +89,7 @@ class InstrumentAUPresetConductor: ObservableObject, HasAudioEngine {
     }
     
     func noteOn(pitch: Pitch, point _: CGPoint) {
-        instrument.play(noteNumber: MIDINoteNumber(pitch.midiNoteNumber), velocity: 90, channel: 0)
+        instrument.play(noteNumber: MIDINoteNumber(pitch.midiNoteNumber), velocity: 120, channel: 0)
     }
 
     func noteOff(pitch: Pitch) {
@@ -225,25 +225,7 @@ extension AVAudioUnit {
         }
     }
     
-//    func setCutoff(value: Float) {
-//        //Only works on iOS Causes loud pops
-//        let instrument = auAudioUnit.fullState?["Instrument"] as? NSDictionary
-//        guard let layers = instrument?["Layers"] as? NSArray else { return }
-//        for layerIndex in 0..<UInt32(layers.count) {
-//            var value = value
-//            AudioUnitSetProperty(
-//                self.audioUnit,
-//                4161,
-//                kAudioUnitScope_LayerItem,
-//                0x40000000 + (0x100 * layerIndex),
-//                &value,
-//                UInt32(MemoryLayout<Float>.size)
-//            )
-//        }
-//    }
-    
     func setAttack(value: Float) {
-        // https://infinum.com/blog/ausampler-missing-documentation/
         let instrument = auAudioUnit.fullState?["Instrument"] as? NSDictionary
         guard let layers = instrument?["Layers"] as? NSArray else { return }
         for layerIndex in 0..<UInt32(layers.count) {
