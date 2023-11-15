@@ -8,12 +8,13 @@ struct SwiftUIKeyboard: View {
     var octaveCount: Int
     var noteOn: (Pitch, CGPoint) -> Void = { _, _ in }
     var noteOff: (Pitch)->Void
+    var color: Color = .pink
     
     var body: some View {
         Keyboard(layout: .piano(pitchRange: Pitch(intValue: firstOctave * 12 + 24)...Pitch(intValue: firstOctave * 12 + octaveCount * 12 + 24)),
                  noteOn: noteOn, noteOff: noteOff){ pitch, isActivated in
             SwiftUIKeyboardKey(pitch: pitch,
-                               isActivated: isActivated)
+                               isActivated: isActivated, color: color)
         }.cornerRadius(5)
     }
 }
@@ -22,6 +23,7 @@ struct SwiftUIKeyboardKey: View {
     @State var MIDIKeyPressed = [Bool](repeating: false, count: 128)
     var pitch : Pitch
     var isActivated : Bool
+    var color: Color
     
     var body: some View {
         VStack{
@@ -30,7 +32,7 @@ struct SwiftUIKeyboardKey: View {
                         text: "",
                         whiteKeyColor: .white,
                         blackKeyColor: .black,
-                        pressedColor:  .pink,
+                        pressedColor:  color,
                         flatTop: true,
                         isActivatedExternally: MIDIKeyPressed[pitch.intValue])
         }.onReceive(NotificationCenter.default.publisher(for: .MIDIKey), perform: { obj in

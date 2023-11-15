@@ -18,6 +18,8 @@ struct MasterView: View {
                     NavigationLink("5. Sampler Synth", destination: RecordView())
                     NavigationLink("6. LFO Timer", destination: LFOView())
                     NavigationLink("7. Instrument AUPreset", destination: InstrumentAUPresetView())
+                    NavigationLink("8. Instrument SFZ", destination: InstrumentSFZView())
+                    NavigationLink("9. Jump Synth", destination: JumpSynthView())
                 }
             }
         }.navigationBarTitle("AudioKit Experiments")

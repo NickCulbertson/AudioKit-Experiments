@@ -34,6 +34,10 @@
 		5ACD75A02AF9799F000E0A0E /* SporthAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5ACD759F2AF9799F000E0A0E /* SporthAudioKit */; };
 		5AD948512B01A7C000780DE2 /* InstrumentAUPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD948502B01A7C000780DE2 /* InstrumentAUPreset.swift */; };
 		5AD948552B02B7B200780DE2 /* CookbookKnob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD948542B02B7B200780DE2 /* CookbookKnob.swift */; };
+		5AD948592B04F50500780DE2 /* InstrumentSFZ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD948582B04F50500780DE2 /* InstrumentSFZ.swift */; };
+		5AD9485C2B04F93D00780DE2 /* DunneAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5AD9485B2B04F93D00780DE2 /* DunneAudioKit */; };
+		5AD9485E2B04F98900780DE2 /* ParameterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD9485D2B04F98900780DE2 /* ParameterRow.swift */; };
+		5AD948602B05056800780DE2 /* JumpSynth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD9485F2B05056800780DE2 /* JumpSynth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,10 @@
 		5ACD759A2AF85C6F000E0A0E /* LFOView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFOView.swift; sourceTree = "<group>"; };
 		5AD948502B01A7C000780DE2 /* InstrumentAUPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentAUPreset.swift; sourceTree = "<group>"; };
 		5AD948542B02B7B200780DE2 /* CookbookKnob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookbookKnob.swift; sourceTree = "<group>"; };
+		5AD948582B04F50500780DE2 /* InstrumentSFZ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentSFZ.swift; sourceTree = "<group>"; };
+		5AD9485D2B04F98900780DE2 /* ParameterRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterRow.swift; sourceTree = "<group>"; };
+		5AD9485F2B05056800780DE2 /* JumpSynth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpSynth.swift; sourceTree = "<group>"; };
+		5AD9489D2B050B0200780DE2 /* DunneAudioKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DunneAudioKit; path = ../../../Downloads/DunneAudioKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A2B88D52AF1558B00366695 /* MIDIKit in Frameworks */,
+				5AD9485C2B04F93D00780DE2 /* DunneAudioKit in Frameworks */,
 				5ACD75942AF53E57000E0A0E /* Waveform in Frameworks */,
 				5ACD75912AF53E49000E0A0E /* AudioKitEX in Frameworks */,
 				5A2B88C92AF1483700366695 /* AudioKit in Frameworks */,
@@ -116,6 +125,7 @@
 		5A2B88912AF1479100366695 = {
 			isa = PBXGroup;
 			children = (
+				5AD9489D2B050B0200780DE2 /* DunneAudioKit */,
 				5A2B88DA2AF157D100366695 /* Sounds */,
 				5A2B889C2AF1479100366695 /* AudioKit-Experiments */,
 				5A2B88AD2AF1479300366695 /* AudioKit-ExperimentsTests */,
@@ -143,6 +153,7 @@
 				5A2B889F2AF1479100366695 /* ContentView.swift */,
 				5ACD75842AF16DD0000E0A0E /* Examples */,
 				5ACD75872AF1822A000E0A0E /* FFTView2.swift */,
+				5AD9485D2B04F98900780DE2 /* ParameterRow.swift */,
 				5AD948542B02B7B200780DE2 /* CookbookKnob.swift */,
 				5ACD758B2AF53E21000E0A0E /* NodeRecorder2.swift */,
 				5A2B88CA2AF1548D00366695 /* SwiftUIElements.swift */,
@@ -188,6 +199,8 @@
 				5ACD758D2AF53E34000E0A0E /* RecorderView.swift */,
 				5ACD759A2AF85C6F000E0A0E /* LFOView.swift */,
 				5AD948502B01A7C000780DE2 /* InstrumentAUPreset.swift */,
+				5AD948582B04F50500780DE2 /* InstrumentSFZ.swift */,
+				5AD9485F2B05056800780DE2 /* JumpSynth.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -216,6 +229,7 @@
 				5ACD75902AF53E49000E0A0E /* AudioKitEX */,
 				5ACD75932AF53E57000E0A0E /* Waveform */,
 				5ACD759F2AF9799F000E0A0E /* SporthAudioKit */,
+				5AD9485B2B04F93D00780DE2 /* DunneAudioKit */,
 			);
 			productName = "AudioKit-Experiments";
 			productReference = 5A2B889A2AF1479100366695 /* AudioKit-Experiments.app */;
@@ -297,6 +311,7 @@
 				5ACD758F2AF53E49000E0A0E /* XCRemoteSwiftPackageReference "AudioKitEX" */,
 				5ACD75922AF53E57000E0A0E /* XCRemoteSwiftPackageReference "Waveform" */,
 				5ACD759E2AF9799F000E0A0E /* XCRemoteSwiftPackageReference "SporthAudioKit" */,
+				5AD9485A2B04F93D00780DE2 /* XCRemoteSwiftPackageReference "DunneAudioKit" */,
 			);
 			productRefGroup = 5A2B889B2AF1479100366695 /* Products */;
 			projectDirPath = "";
@@ -343,9 +358,12 @@
 			files = (
 				5ACD758C2AF53E21000E0A0E /* NodeRecorder2.swift in Sources */,
 				5A2B88A02AF1479100366695 /* ContentView.swift in Sources */,
+				5AD948602B05056800780DE2 /* JumpSynth.swift in Sources */,
 				5A2B88D12AF1555100366695 /* SoundFont.swift in Sources */,
 				5ACD758A2AF456FB000E0A0E /* LinearVisualizer.swift in Sources */,
+				5AD948592B04F50500780DE2 /* InstrumentSFZ.swift in Sources */,
 				5ACD75982AF57A4C000E0A0E /* SpriteSound.swift in Sources */,
+				5AD9485E2B04F98900780DE2 /* ParameterRow.swift in Sources */,
 				5AD948512B01A7C000780DE2 /* InstrumentAUPreset.swift in Sources */,
 				5A2B889E2AF1479100366695 /* AudioKit_ExperimentsApp.swift in Sources */,
 				5ACD75832AF16D3D000E0A0E /* SoundFont+MIDI.swift in Sources */,
@@ -758,6 +776,14 @@
 				minimumVersion = 5.5.1;
 			};
 		};
+		5AD9485A2B04F93D00780DE2 /* XCRemoteSwiftPackageReference "DunneAudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/DunneAudioKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -795,6 +821,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5ACD759E2AF9799F000E0A0E /* XCRemoteSwiftPackageReference "SporthAudioKit" */;
 			productName = SporthAudioKit;
+		};
+		5AD9485B2B04F93D00780DE2 /* DunneAudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5AD9485A2B04F93D00780DE2 /* XCRemoteSwiftPackageReference "DunneAudioKit" */;
+			productName = DunneAudioKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
