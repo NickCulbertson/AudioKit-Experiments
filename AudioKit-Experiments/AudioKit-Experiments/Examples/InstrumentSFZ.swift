@@ -30,7 +30,7 @@ class InstrumentSFZConductor: ObservableObject, HasAudioEngine {
 
     init() {
         engine.output = PeakLimiter(instrument, attackTime: 0.001, decayTime: 0.001, preGain: 0)
-        // Load SFZ file with Dunne Sampler
+        // Load SFZ file with DunneSampler
         if let fileURL = Bundle.main.url(forResource: "Sounds/sqr", withExtension: "SFZ") {
             instrument.loadSFZ(url: fileURL)
         } else {
@@ -123,7 +123,7 @@ struct InstrumentSFZView: View {
                 }.padding(5)
             }
         }
-        SwiftUIKeyboard( firstOctave: 2
+        SwiftUIKeyboard( firstOctave: 1
                          ,octaveCount: 4,noteOn: conductor.noteOn,
                          noteOff: conductor.noteOff, color: .purple)
             .onAppear {
