@@ -9,7 +9,7 @@ import Controls
 import Tonic
 import MIDIKit
 
-class JumpSynthConductor: ObservableObject, HasAudioEngine {
+class PolyphonicSynthConductor: ObservableObject, HasAudioEngine {
     let engine = AudioEngine()
     var instrument = Synth()
 
@@ -92,8 +92,8 @@ class JumpSynthConductor: ObservableObject, HasAudioEngine {
     }
 }
 
-struct JumpSynthView: View {
-    @StateObject var conductor = JumpSynthConductor()
+struct PolyphonicSynthView: View {
+    @StateObject var conductor = PolyphonicSynthConductor()
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
