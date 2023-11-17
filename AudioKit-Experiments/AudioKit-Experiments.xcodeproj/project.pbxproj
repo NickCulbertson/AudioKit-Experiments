@@ -37,9 +37,8 @@
 		5AD948592B04F50500780DE2 /* InstrumentSFZ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD948582B04F50500780DE2 /* InstrumentSFZ.swift */; };
 		5AD9485C2B04F93D00780DE2 /* DunneAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5AD9485B2B04F93D00780DE2 /* DunneAudioKit */; };
 		5AD9485E2B04F98900780DE2 /* ParameterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD9485D2B04F98900780DE2 /* ParameterRow.swift */; };
-		5AD948602B05056800780DE2 /* JumpSynth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD9485F2B05056800780DE2 /* JumpSynth.swift */; };
+		5AD948602B05056800780DE2 /* PolyphonicSynth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD9485F2B05056800780DE2 /* PolyphonicSynth.swift */; };
 		5AD948DB2B06A56F00780DE2 /* Arpeggiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD948DA2B06A56F00780DE2 /* Arpeggiator.swift */; };
-		5AD948DD2B06AEF700780DE2 /* CallbackLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD948DC2B06AEF700780DE2 /* CallbackLoop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,10 +86,9 @@
 		5AD948542B02B7B200780DE2 /* CookbookKnob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookbookKnob.swift; sourceTree = "<group>"; };
 		5AD948582B04F50500780DE2 /* InstrumentSFZ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentSFZ.swift; sourceTree = "<group>"; };
 		5AD9485D2B04F98900780DE2 /* ParameterRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterRow.swift; sourceTree = "<group>"; };
-		5AD9485F2B05056800780DE2 /* JumpSynth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpSynth.swift; sourceTree = "<group>"; };
+		5AD9485F2B05056800780DE2 /* PolyphonicSynth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolyphonicSynth.swift; sourceTree = "<group>"; };
 		5AD9489D2B050B0200780DE2 /* DunneAudioKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DunneAudioKit; path = ../../../Downloads/DunneAudioKit; sourceTree = "<group>"; };
 		5AD948DA2B06A56F00780DE2 /* Arpeggiator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arpeggiator.swift; sourceTree = "<group>"; };
-		5AD948DC2B06AEF700780DE2 /* CallbackLoop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallbackLoop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +159,6 @@
 				5AD948542B02B7B200780DE2 /* CookbookKnob.swift */,
 				5ACD758B2AF53E21000E0A0E /* NodeRecorder2.swift */,
 				5A2B88CA2AF1548D00366695 /* SwiftUIElements.swift */,
-				5AD948DC2B06AEF700780DE2 /* CallbackLoop.swift */,
 				5A2B88A12AF1479200366695 /* Assets.xcassets */,
 				5A2B88A32AF1479200366695 /* Preview Content */,
 			);
@@ -205,7 +202,7 @@
 				5ACD759A2AF85C6F000E0A0E /* LFOView.swift */,
 				5AD948502B01A7C000780DE2 /* InstrumentAUPreset.swift */,
 				5AD948582B04F50500780DE2 /* InstrumentSFZ.swift */,
-				5AD9485F2B05056800780DE2 /* JumpSynth.swift */,
+				5AD9485F2B05056800780DE2 /* PolyphonicSynth.swift */,
 				5AD948DA2B06A56F00780DE2 /* Arpeggiator.swift */,
 			);
 			path = Examples;
@@ -364,9 +361,8 @@
 			files = (
 				5ACD758C2AF53E21000E0A0E /* NodeRecorder2.swift in Sources */,
 				5AD948DB2B06A56F00780DE2 /* Arpeggiator.swift in Sources */,
-				5AD948DD2B06AEF700780DE2 /* CallbackLoop.swift in Sources */,
 				5A2B88A02AF1479100366695 /* ContentView.swift in Sources */,
-				5AD948602B05056800780DE2 /* JumpSynth.swift in Sources */,
+				5AD948602B05056800780DE2 /* PolyphonicSynth.swift in Sources */,
 				5A2B88D12AF1555100366695 /* SoundFont.swift in Sources */,
 				5ACD758A2AF456FB000E0A0E /* LinearVisualizer.swift in Sources */,
 				5AD948592B04F50500780DE2 /* InstrumentSFZ.swift in Sources */,
