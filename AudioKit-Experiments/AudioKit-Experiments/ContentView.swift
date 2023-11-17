@@ -21,6 +21,9 @@ struct MasterView: View {
                     NavigationLink("8. Instrument SFZ", destination: InstrumentSFZView())
                     NavigationLink("9. Jump Synth", destination: JumpSynthView())
                 }
+                Group {
+                    NavigationLink("10. Arpeggiator", destination: ArpeggiatorView())
+                }
             }
         }.navigationBarTitle("AudioKit Experiments")
     }

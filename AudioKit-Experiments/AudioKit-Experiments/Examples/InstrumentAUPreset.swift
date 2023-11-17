@@ -176,7 +176,7 @@ struct InstrumentAUPresetView: View {
     
     var body: some View {
         ZStack{
-            FFTView2(conductor.instrument, barColor: .pink, placeMiddle: true, barCount: 40)
+            FFTView2(conductor.instrument, barColor: .green, placeMiddle: true, barCount: 40)
             VStack{
                 HStack {
                     CookbookKnob(text: "Attack", parameter: $conductor.attack, range: 0.0...6.0)
@@ -196,7 +196,7 @@ struct InstrumentAUPresetView: View {
         }
         SwiftUIKeyboard( firstOctave: 2
                          ,octaveCount: 4,noteOn: conductor.noteOn,
-                         noteOff: conductor.noteOff)
+                         noteOff: conductor.noteOff, color: .green)
             .onAppear {
                 conductor.start()
             }
