@@ -11,8 +11,8 @@ import MIDIKit
 class ArpeggiatorConductor: ObservableObject, HasAudioEngine {
     let engine = AudioEngine()
     var instrument = AppleSampler()
-    var sequencer = AppleSequencer()
-    var midiCallback = MIDICallbackInstrument()
+    var sequencer: SequencerTrack!
+    var midiCallback: CallbackInstrument!
     
     var heldNotes = [Int]()
     var arpUp = false
@@ -28,15 +28,15 @@ class ArpeggiatorConductor: ObservableObject, HasAudioEngine {
     
     @Published var tempo : Float = 120.0 {
         didSet{
-            sequencer.setTempo(Double(tempo))
+            sequencer.tempo = BPM(tempo)
         }
     }
     
     @Published var noteLength : Float = 1.0 {
         didSet{
             sequencerNoteLength = Double(noteLength)
-            sequencer.tracks.first?.clearNote(MIDINoteNumber(60))
-            sequencer.tracks.first?.add(noteNumber: MIDINoteNumber(60), velocity: 127, position: Duration(beats: 0), duration: Duration(beats: max(0.02, sequencerNoteLength * 0.24)))
+            sequencer.clear()
+            sequencer.add(noteNumber: 60, position: 0.0, duration: max(0.05, sequencerNoteLength * 0.24))
         }
     }
     
@@ -113,6 +113,10 @@ class ArpeggiatorConductor: ObservableObject, HasAudioEngine {
     
     func fireTimer() {
         
+        for i in 0...127 {
+            self.instrument.stop(noteNumber: MIDINoteNumber(i), channel: 0)
+        }
+        
         if self.heldNotes.count < 1 {
             return
         }
@@ -160,7 +164,22 @@ class ArpeggiatorConductor: ObservableObject, HasAudioEngine {
     }
     
     init() {
-        engine.output = PeakLimiter(instrument, attackTime: 0.001, decayTime: 0.001, preGain: 0)
+        
+        midiCallback = CallbackInstrument { status, note, vel in
+            if status == 144 { //Note On
+                self.fireTimer()
+            } else if status == 128 { //Note Off
+            //all notes off
+                for i in 0...127 {
+                    self.instrument.stop(noteNumber: MIDINoteNumber(i), channel: 0)
+                }
+            }
+        }
+        
+        engine.output = PeakLimiter(Mixer(instrument, midiCallback), attackTime: 0.001, decayTime: 0.001, preGain: 0)
+        
+        
+        
         do {
             if let fileURL = Bundle.main.url(forResource: "Sounds/Instrument1", withExtension: "aupreset") {
                 try instrument.loadInstrument(url: fileURL)
@@ -176,26 +195,12 @@ class ArpeggiatorConductor: ObservableObject, HasAudioEngine {
         resonance = 0
         cutoff = 127
         
-        //ARP STUFF
-        midiCallback.callback = { status, note, velocity in
-            if status == 144 { //Note On
-                self.fireTimer()
-            } else if status == 128 { //Note Off
-                //all notes off
-                for i in 0...127 {
-                    self.instrument.stop(noteNumber: MIDINoteNumber(i), channel: 0)
-                }
-            }
-        }
+        sequencer = SequencerTrack(targetNode: midiCallback)
+        sequencer.length = 0.25
+        sequencer.loopEnabled = true
+        sequencer.add(noteNumber: 60, position: 0.0, duration: 0.24)
         
-        _ = sequencer.newTrack("Track 1")
-        sequencer.setLength(Duration(beats: 0.25))
-        sequencer.setGlobalMIDIOutput(midiCallback.midiIn)
-        sequencer.enableLooping()
-        sequencer.tracks.first?.add(noteNumber: MIDINoteNumber(60), velocity: 127, position: Duration(beats: 0), duration: Duration(beats: max(0.02, sequencerNoteLength * 0.24)))
-        sequencer.setTempo(Double(tempo))
-        
-        sequencer.play()
+        sequencer?.playFromStart()
         
         
         // Set up MIDI
@@ -266,7 +271,7 @@ struct ArpeggiatorView: View {
     
     var body: some View {
         ZStack{
-            FFTView2(conductor.instrument, barColor: .pink, placeMiddle: true, barCount: 40)
+            FFTView2(conductor.instrument, barColor: .yellow, placeMiddle: true, barCount: 40)
             VStack{
                 HStack {
                     CookbookKnob(text: "Attack", parameter: $conductor.attack, range: 0.0...6.0)
@@ -287,7 +292,7 @@ struct ArpeggiatorView: View {
         }
         SwiftUIKeyboard( firstOctave: 2
                          ,octaveCount: 4,noteOn: conductor.noteOn,
-                         noteOff: conductor.noteOff)
+                         noteOff: conductor.noteOff, color: .yellow)
         .onAppear {
             conductor.start()
         }
