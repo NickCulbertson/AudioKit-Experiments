@@ -112,11 +112,9 @@ class ArpeggiatorConductor: ObservableObject, HasAudioEngine {
     }
     
     func fireTimer() {
-        
         for i in 0...127 {
             self.instrument.stop(noteNumber: MIDINoteNumber(i), channel: 0)
         }
-        
         if self.heldNotes.count < 1 {
             return
         }
