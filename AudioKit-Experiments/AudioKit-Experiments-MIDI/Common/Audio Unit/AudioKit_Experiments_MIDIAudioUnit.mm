@@ -185,12 +185,12 @@ int previousNote = -1;
         // Check Cem Olcay's AUv3 MIDI Example for more details
         // https://github.com/cemolcay/MIDISequencerAUv3/blob/fe44425dbeab679295272bfce633991facf204e3/AUv3/AUv3AudioUnit.mm#L128
         
-        // Check AUv3 support.
+        // Check AUv3 support
         if (self.MIDIOutputEventListBlock == NULL || self.transportStateBlock == NULL || self.musicalContextBlock == NULL) {
             return noErr;
         }
         
-        // Get tempo from host.
+        // Get tempo from host
         double currentTempo;
         double currentBeat;
         if (self->_kernel.mMusicalContextBlock( &currentTempo, NULL, NULL, &currentBeat, NULL, NULL ) ) {
@@ -204,8 +204,6 @@ int previousNote = -1;
                 }
                 NSArray *array = @[@50, @52, @54, @55, @57, @59, @61];
                 int randomNote = [array[arc4random_uniform(6)] intValue] + 12 * arc4random_uniform(2);
-                NSLog(@"randomNote %d", randomNote);
-                
                 
                 int randomPlay = arc4random_uniform(2);
                 if (randomPlay == 1) {
@@ -214,10 +212,10 @@ int previousNote = -1;
             }
         }
         
-        // Check if it is playing.
+        // Check if it is playing
         AUHostTransportStateFlags transportStateFlags;
         if (self.transportStateBlock(&transportStateFlags, NULL, NULL, NULL)) {
-            // Check if transport moving.
+            // Check if transport moving
             if ((transportStateFlags & AUHostTransportStateMoving) != AUHostTransportStateMoving) {
                 // Transport not moving, stop.
                 for (int i = 0; i <= 127; i++)
