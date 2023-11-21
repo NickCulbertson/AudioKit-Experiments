@@ -55,22 +55,6 @@
 		5AF8AAA92B0BDB89005F3F10 /* ObservableAUParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8AAA82B0BDB89005F3F10 /* ObservableAUParameter.swift */; };
 		5AF8AAAB2B0BDB89005F3F10 /* AudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8AAAA2B0BDB89005F3F10 /* AudioUnitViewController.swift */; };
 		5AF8AAAF2B0BDB89005F3F10 /* AudioKit-Experiments-MIDI.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5AF8AA802B0BDB89005F3F10 /* AudioKit-Experiments-MIDI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		5AF8AABC2B0BDC43005F3F10 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8AABB2B0BDC43005F3F10 /* README.md */; };
-		5AF8AAC12B0BDC43005F3F10 /* ParameterSpecBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8AAC02B0BDC43005F3F10 /* ParameterSpecBase.swift */; };
-		5AF8AAC42B0BDC43005F3F10 /* CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8AAC32B0BDC43005F3F10 /* CrossPlatform.swift */; };
-		5AF8AAC62B0BDC43005F3F10 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8AAC52B0BDC43005F3F10 /* String+Utils.swift */; };
-		5AF8AACA2B0BDC43005F3F10 /* AudioKit_Experiments_EffectAudioUnit.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8AAC92B0BDC43005F3F10 /* AudioKit_Experiments_EffectAudioUnit.mm */; };
-		5AF8AACD2B0BDC43005F3F10 /* AudioKit_Experiments_EffectAUProcessHelper.hpp in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8AACC2B0BDC43005F3F10 /* AudioKit_Experiments_EffectAUProcessHelper.hpp */; };
-		5AF8AACF2B0BDC43005F3F10 /* AudioKit_Experiments_EffectBufferedAudioBus.hpp in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8AACE2B0BDC43005F3F10 /* AudioKit_Experiments_EffectBufferedAudioBus.hpp */; };
-		5AF8AAD32B0BDC43005F3F10 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8AAD22B0BDC43005F3F10 /* Parameters.swift */; };
-		5AF8AAD62B0BDC43005F3F10 /* AudioKit_Experiments_EffectDSPKernel.hpp in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8AAD52B0BDC43005F3F10 /* AudioKit_Experiments_EffectDSPKernel.hpp */; };
-		5AF8AAD92B0BDC43005F3F10 /* AudioKit_Experiments_EffectMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8AAD82B0BDC43005F3F10 /* AudioKit_Experiments_EffectMainView.swift */; };
-		5AF8AADB2B0BDC43005F3F10 /* ParameterSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8AADA2B0BDC43005F3F10 /* ParameterSlider.swift */; };
-		5AF8AAE02B0BDC43005F3F10 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8AADE2B0BDC43005F3F10 /* MainInterface.storyboard */; };
-		5AF8AAE22B0BDC43005F3F10 /* ObservableAUParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8AAE12B0BDC43005F3F10 /* ObservableAUParameter.swift */; };
-		5AF8AAE42B0BDC43005F3F10 /* AudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8AAE32B0BDC43005F3F10 /* AudioUnitViewController.swift */; };
-		5AF8AAE82B0BDC43005F3F10 /* AudioKit-Experiments-Effect.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5AF8AAB92B0BDC43005F3F10 /* AudioKit-Experiments-Effect.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		5AF8AAEF2B0BDC64005F3F10 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5AF8AAEE2B0BDC64005F3F10 /* AudioKit */; };
 		5AF8AAF12B0BDC71005F3F10 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5AF8AAF02B0BDC71005F3F10 /* AudioKit */; };
 /* End PBXBuildFile section */
 
@@ -96,13 +80,6 @@
 			remoteGlobalIDString = 5AF8AA7F2B0BDB89005F3F10;
 			remoteInfo = "AudioKit-Experiments-MIDI";
 		};
-		5AF8AAE62B0BDC43005F3F10 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5A2B88922AF1479100366695 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5AF8AAB82B0BDC43005F3F10;
-			remoteInfo = "AudioKit-Experiments-Effect";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -112,7 +89,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				5AF8AAE82B0BDC43005F3F10 /* AudioKit-Experiments-Effect.appex in Embed Foundation Extensions */,
 				5AF8AAAF2B0BDB89005F3F10 /* AudioKit-Experiments-MIDI.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -172,26 +148,6 @@
 		5AF8AAAA2B0BDB89005F3F10 /* AudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitViewController.swift; sourceTree = "<group>"; };
 		5AF8AAAC2B0BDB89005F3F10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AF8AAB02B0BDB89005F3F10 /* AudioKit-Experiments-MIDI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AudioKit-Experiments-MIDI.entitlements"; sourceTree = "<group>"; };
-		5AF8AAB92B0BDC43005F3F10 /* AudioKit-Experiments-Effect.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AudioKit-Experiments-Effect.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5AF8AABB2B0BDC43005F3F10 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		5AF8AABE2B0BDC43005F3F10 /* AudioKit_Experiments_Effect-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AudioKit_Experiments_Effect-Bridging-Header.h"; sourceTree = "<group>"; };
-		5AF8AAC02B0BDC43005F3F10 /* ParameterSpecBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterSpecBase.swift; sourceTree = "<group>"; };
-		5AF8AAC32B0BDC43005F3F10 /* CrossPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossPlatform.swift; sourceTree = "<group>"; };
-		5AF8AAC52B0BDC43005F3F10 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
-		5AF8AAC82B0BDC43005F3F10 /* AudioKit_Experiments_EffectAudioUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioKit_Experiments_EffectAudioUnit.h; sourceTree = "<group>"; };
-		5AF8AAC92B0BDC43005F3F10 /* AudioKit_Experiments_EffectAudioUnit.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioKit_Experiments_EffectAudioUnit.mm; sourceTree = "<group>"; };
-		5AF8AACC2B0BDC43005F3F10 /* AudioKit_Experiments_EffectAUProcessHelper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AudioKit_Experiments_EffectAUProcessHelper.hpp; sourceTree = "<group>"; };
-		5AF8AACE2B0BDC43005F3F10 /* AudioKit_Experiments_EffectBufferedAudioBus.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AudioKit_Experiments_EffectBufferedAudioBus.hpp; sourceTree = "<group>"; };
-		5AF8AAD12B0BDC43005F3F10 /* AudioKit_Experiments_EffectParameterAddresses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioKit_Experiments_EffectParameterAddresses.h; sourceTree = "<group>"; };
-		5AF8AAD22B0BDC43005F3F10 /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
-		5AF8AAD52B0BDC43005F3F10 /* AudioKit_Experiments_EffectDSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AudioKit_Experiments_EffectDSPKernel.hpp; sourceTree = "<group>"; };
-		5AF8AAD82B0BDC43005F3F10 /* AudioKit_Experiments_EffectMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioKit_Experiments_EffectMainView.swift; sourceTree = "<group>"; };
-		5AF8AADA2B0BDC43005F3F10 /* ParameterSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterSlider.swift; sourceTree = "<group>"; };
-		5AF8AADF2B0BDC43005F3F10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MainInterface.storyboard; sourceTree = "<group>"; };
-		5AF8AAE12B0BDC43005F3F10 /* ObservableAUParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableAUParameter.swift; sourceTree = "<group>"; };
-		5AF8AAE32B0BDC43005F3F10 /* AudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitViewController.swift; sourceTree = "<group>"; };
-		5AF8AAE52B0BDC43005F3F10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5AF8AAE92B0BDC43005F3F10 /* AudioKit-Experiments-Effect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AudioKit-Experiments-Effect.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,14 +188,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5AF8AAB62B0BDC43005F3F10 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AF8AAEF2B0BDC64005F3F10 /* AudioKit in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -252,7 +200,6 @@
 				5A2B88AD2AF1479300366695 /* AudioKit-ExperimentsTests */,
 				5A2B88B72AF1479300366695 /* AudioKit-ExperimentsUITests */,
 				5AF8AA812B0BDB89005F3F10 /* AudioKit-Experiments-MIDI */,
-				5AF8AABA2B0BDC43005F3F10 /* AudioKit-Experiments-Effect */,
 				5A2B889B2AF1479100366695 /* Products */,
 				5AF8AAED2B0BDC64005F3F10 /* Frameworks */,
 			);
@@ -265,7 +212,6 @@
 				5A2B88AA2AF1479300366695 /* AudioKit-ExperimentsTests.xctest */,
 				5A2B88B42AF1479300366695 /* AudioKit-ExperimentsUITests.xctest */,
 				5AF8AA802B0BDB89005F3F10 /* AudioKit-Experiments-MIDI.appex */,
-				5AF8AAB92B0BDC43005F3F10 /* AudioKit-Experiments-Effect.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -439,112 +385,6 @@
 			path = Base.lproj;
 			sourceTree = "<group>";
 		};
-		5AF8AABA2B0BDC43005F3F10 /* AudioKit-Experiments-Effect */ = {
-			isa = PBXGroup;
-			children = (
-				5AF8AAE92B0BDC43005F3F10 /* AudioKit-Experiments-Effect.entitlements */,
-				5AF8AABB2B0BDC43005F3F10 /* README.md */,
-				5AF8AAE52B0BDC43005F3F10 /* Info.plist */,
-				5AF8AABD2B0BDC43005F3F10 /* Common */,
-				5AF8AAD02B0BDC43005F3F10 /* Parameters */,
-				5AF8AAD42B0BDC43005F3F10 /* DSP */,
-				5AF8AAD72B0BDC43005F3F10 /* UI */,
-			);
-			path = "AudioKit-Experiments-Effect";
-			sourceTree = "<group>";
-		};
-		5AF8AABD2B0BDC43005F3F10 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				5AF8AABE2B0BDC43005F3F10 /* AudioKit_Experiments_Effect-Bridging-Header.h */,
-				5AF8AABF2B0BDC43005F3F10 /* Parameters */,
-				5AF8AAC22B0BDC43005F3F10 /* Utility */,
-				5AF8AAC72B0BDC43005F3F10 /* Audio Unit */,
-				5AF8AACB2B0BDC43005F3F10 /* DSP */,
-				5AF8AADC2B0BDC43005F3F10 /* UI */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		5AF8AABF2B0BDC43005F3F10 /* Parameters */ = {
-			isa = PBXGroup;
-			children = (
-				5AF8AAC02B0BDC43005F3F10 /* ParameterSpecBase.swift */,
-			);
-			path = Parameters;
-			sourceTree = "<group>";
-		};
-		5AF8AAC22B0BDC43005F3F10 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				5AF8AAC32B0BDC43005F3F10 /* CrossPlatform.swift */,
-				5AF8AAC52B0BDC43005F3F10 /* String+Utils.swift */,
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
-		5AF8AAC72B0BDC43005F3F10 /* Audio Unit */ = {
-			isa = PBXGroup;
-			children = (
-				5AF8AAC82B0BDC43005F3F10 /* AudioKit_Experiments_EffectAudioUnit.h */,
-				5AF8AAC92B0BDC43005F3F10 /* AudioKit_Experiments_EffectAudioUnit.mm */,
-			);
-			path = "Audio Unit";
-			sourceTree = "<group>";
-		};
-		5AF8AACB2B0BDC43005F3F10 /* DSP */ = {
-			isa = PBXGroup;
-			children = (
-				5AF8AACC2B0BDC43005F3F10 /* AudioKit_Experiments_EffectAUProcessHelper.hpp */,
-				5AF8AACE2B0BDC43005F3F10 /* AudioKit_Experiments_EffectBufferedAudioBus.hpp */,
-			);
-			path = DSP;
-			sourceTree = "<group>";
-		};
-		5AF8AAD02B0BDC43005F3F10 /* Parameters */ = {
-			isa = PBXGroup;
-			children = (
-				5AF8AAD12B0BDC43005F3F10 /* AudioKit_Experiments_EffectParameterAddresses.h */,
-				5AF8AAD22B0BDC43005F3F10 /* Parameters.swift */,
-			);
-			path = Parameters;
-			sourceTree = "<group>";
-		};
-		5AF8AAD42B0BDC43005F3F10 /* DSP */ = {
-			isa = PBXGroup;
-			children = (
-				5AF8AAD52B0BDC43005F3F10 /* AudioKit_Experiments_EffectDSPKernel.hpp */,
-			);
-			path = DSP;
-			sourceTree = "<group>";
-		};
-		5AF8AAD72B0BDC43005F3F10 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				5AF8AAD82B0BDC43005F3F10 /* AudioKit_Experiments_EffectMainView.swift */,
-				5AF8AADA2B0BDC43005F3F10 /* ParameterSlider.swift */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		5AF8AADC2B0BDC43005F3F10 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				5AF8AAE12B0BDC43005F3F10 /* ObservableAUParameter.swift */,
-				5AF8AAE32B0BDC43005F3F10 /* AudioUnitViewController.swift */,
-				5AF8AADD2B0BDC43005F3F10 /* Base.lproj */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		5AF8AADD2B0BDC43005F3F10 /* Base.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				5AF8AADE2B0BDC43005F3F10 /* MainInterface.storyboard */,
-			);
-			path = Base.lproj;
-			sourceTree = "<group>";
-		};
 		5AF8AAED2B0BDC64005F3F10 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,7 +408,6 @@
 			);
 			dependencies = (
 				5AF8AAAE2B0BDB89005F3F10 /* PBXTargetDependency */,
-				5AF8AAE72B0BDC43005F3F10 /* PBXTargetDependency */,
 			);
 			name = "AudioKit-Experiments";
 			packageProductDependencies = (
@@ -641,26 +480,6 @@
 			productReference = 5AF8AA802B0BDB89005F3F10 /* AudioKit-Experiments-MIDI.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		5AF8AAB82B0BDC43005F3F10 /* AudioKit-Experiments-Effect */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5AF8AAEA2B0BDC43005F3F10 /* Build configuration list for PBXNativeTarget "AudioKit-Experiments-Effect" */;
-			buildPhases = (
-				5AF8AAB52B0BDC43005F3F10 /* Sources */,
-				5AF8AAB62B0BDC43005F3F10 /* Frameworks */,
-				5AF8AAB72B0BDC43005F3F10 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "AudioKit-Experiments-Effect";
-			packageProductDependencies = (
-				5AF8AAEE2B0BDC64005F3F10 /* AudioKit */,
-			);
-			productName = "AudioKit-Experiments-Effect";
-			productReference = 5AF8AAB92B0BDC43005F3F10 /* AudioKit-Experiments-Effect.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -683,9 +502,6 @@
 						TestTargetID = 5A2B88992AF1479100366695;
 					};
 					5AF8AA7F2B0BDB89005F3F10 = {
-						CreatedOnToolsVersion = 15.0;
-					};
-					5AF8AAB82B0BDC43005F3F10 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
@@ -717,7 +533,6 @@
 				5A2B88A92AF1479300366695 /* AudioKit-ExperimentsTests */,
 				5A2B88B32AF1479300366695 /* AudioKit-ExperimentsUITests */,
 				5AF8AA7F2B0BDB89005F3F10 /* AudioKit-Experiments-MIDI */,
-				5AF8AAB82B0BDC43005F3F10 /* AudioKit-Experiments-Effect */,
 			);
 		};
 /* End PBXProject section */
@@ -755,18 +570,6 @@
 				5AF8AAA72B0BDB89005F3F10 /* MainInterface.storyboard in Resources */,
 				5AF8AA942B0BDB89005F3F10 /* AudioKit_Experiments_MIDIAUProcessHelper.hpp in Resources */,
 				5AF8AA832B0BDB89005F3F10 /* README.md in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5AF8AAB72B0BDC43005F3F10 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AF8AACD2B0BDC43005F3F10 /* AudioKit_Experiments_EffectAUProcessHelper.hpp in Resources */,
-				5AF8AAE02B0BDC43005F3F10 /* MainInterface.storyboard in Resources */,
-				5AF8AACF2B0BDC43005F3F10 /* AudioKit_Experiments_EffectBufferedAudioBus.hpp in Resources */,
-				5AF8AABC2B0BDC43005F3F10 /* README.md in Resources */,
-				5AF8AAD62B0BDC43005F3F10 /* AudioKit_Experiments_EffectDSPKernel.hpp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -833,22 +636,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5AF8AAB52B0BDC43005F3F10 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AF8AAD32B0BDC43005F3F10 /* Parameters.swift in Sources */,
-				5AF8AAD92B0BDC43005F3F10 /* AudioKit_Experiments_EffectMainView.swift in Sources */,
-				5AF8AAE22B0BDC43005F3F10 /* ObservableAUParameter.swift in Sources */,
-				5AF8AAC12B0BDC43005F3F10 /* ParameterSpecBase.swift in Sources */,
-				5AF8AAC42B0BDC43005F3F10 /* CrossPlatform.swift in Sources */,
-				5AF8AAE42B0BDC43005F3F10 /* AudioUnitViewController.swift in Sources */,
-				5AF8AADB2B0BDC43005F3F10 /* ParameterSlider.swift in Sources */,
-				5AF8AACA2B0BDC43005F3F10 /* AudioKit_Experiments_EffectAudioUnit.mm in Sources */,
-				5AF8AAC62B0BDC43005F3F10 /* String+Utils.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -867,11 +654,6 @@
 			target = 5AF8AA7F2B0BDB89005F3F10 /* AudioKit-Experiments-MIDI */;
 			targetProxy = 5AF8AAAD2B0BDB89005F3F10 /* PBXContainerItemProxy */;
 		};
-		5AF8AAE72B0BDC43005F3F10 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5AF8AAB82B0BDC43005F3F10 /* AudioKit-Experiments-Effect */;
-			targetProxy = 5AF8AAE62B0BDC43005F3F10 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -879,14 +661,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				5AF8AAA62B0BDB89005F3F10 /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
-		5AF8AADE2B0BDC43005F3F10 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5AF8AADF2B0BDC43005F3F10 /* Base */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -1225,66 +999,6 @@
 			};
 			name = Release;
 		};
-		5AF8AAEB2B0BDC43005F3F10 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
-				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_ENTITLEMENTS = "AudioKit-Experiments-Effect/AudioKit-Experiments-Effect.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = R6J85WRCEG;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "AudioKit-Experiments-Effect/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "AudioKit-Experiments-Effect";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.MobyPixel.AudioKit-Experiments.AudioKit-Experiments-Effect";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "AudioKit-Experiments-Effect/Common/AudioKit_Experiments_Effect-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		5AF8AAEC2B0BDC43005F3F10 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
-				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_ENTITLEMENTS = "AudioKit-Experiments-Effect/AudioKit-Experiments-Effect.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = R6J85WRCEG;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "AudioKit-Experiments-Effect/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "AudioKit-Experiments-Effect";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.MobyPixel.AudioKit-Experiments.AudioKit-Experiments-Effect";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "AudioKit-Experiments-Effect/Common/AudioKit_Experiments_Effect-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1329,15 +1043,6 @@
 			buildConfigurations = (
 				5AF8AAB22B0BDB8A005F3F10 /* Debug */,
 				5AF8AAB32B0BDB8A005F3F10 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5AF8AAEA2B0BDC43005F3F10 /* Build configuration list for PBXNativeTarget "AudioKit-Experiments-Effect" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5AF8AAEB2B0BDC43005F3F10 /* Debug */,
-				5AF8AAEC2B0BDC43005F3F10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1451,11 +1156,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5AD9485A2B04F93D00780DE2 /* XCRemoteSwiftPackageReference "DunneAudioKit" */;
 			productName = DunneAudioKit;
-		};
-		5AF8AAEE2B0BDC64005F3F10 /* AudioKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5A2B88C72AF1483700366695 /* XCRemoteSwiftPackageReference "AudioKit" */;
-			productName = AudioKit;
 		};
 		5AF8AAF02B0BDC71005F3F10 /* AudioKit */ = {
 			isa = XCSwiftPackageProductDependency;
