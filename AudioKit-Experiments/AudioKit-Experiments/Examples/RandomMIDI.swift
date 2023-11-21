@@ -97,12 +97,13 @@ class RandomMIDIConductor: ObservableObject, HasAudioEngine {
     }
     
     func fireTimer() {
+        // Stop notes
         for i in 0...127 {
             self.instrument.stop(noteNumber: MIDINoteNumber(i), channel: 0)
         }
         
+        // Play random note in a scale
         let randomNote = noteArray[Int.random(in: 0..<7)] + 12 * Int.random(in: 0..<3);
-        
         if Int.random(in: 0..<3) == 1 {
             instrument.play(noteNumber: MIDINoteNumber(randomNote), velocity: 120, channel: 0)
         }
