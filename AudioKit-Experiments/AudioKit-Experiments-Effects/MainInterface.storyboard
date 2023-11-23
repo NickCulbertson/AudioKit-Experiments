@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Audio Unit View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AudioUnitViewController" customModule="AudioKit_Experiments_Effects" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vdp-fd-J0q">
+                                <rect key="frame" x="148" y="440.5" width="118" height="30"/>
+                            </slider>
+                            <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gKp-aV-cdk">
+                                <rect key="frame" x="148" y="479.5" width="118" height="31"/>
+                            </slider>
+                            <slider opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2YE-TB-kqK">
+                                <rect key="frame" x="148" y="519.5" width="118" height="31"/>
+                            </slider>
+                            <slider opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zxd-UJ-ax1">
+                                <rect key="frame" x="148" y="559.5" width="118" height="31"/>
+                            </slider>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="u2v-qu-mbu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2YE-TB-kqK" firstAttribute="centerX" secondItem="u2v-qu-mbu" secondAttribute="centerX" id="3io-Uw-0yn"/>
+                            <constraint firstItem="2YE-TB-kqK" firstAttribute="width" secondItem="Vdp-fd-J0q" secondAttribute="width" id="KRK-wg-Yul"/>
+                            <constraint firstItem="zxd-UJ-ax1" firstAttribute="top" secondItem="2YE-TB-kqK" secondAttribute="bottom" constant="10" id="OsQ-9x-vRA"/>
+                            <constraint firstItem="2YE-TB-kqK" firstAttribute="top" secondItem="gKp-aV-cdk" secondAttribute="bottom" constant="10" id="SBS-Dz-prs"/>
+                            <constraint firstItem="Vdp-fd-J0q" firstAttribute="centerY" secondItem="u2v-qu-mbu" secondAttribute="centerY" id="ULw-Db-lyr"/>
+                            <constraint firstItem="gKp-aV-cdk" firstAttribute="centerX" secondItem="u2v-qu-mbu" secondAttribute="centerX" id="YbX-eu-fvI"/>
+                            <constraint firstItem="zxd-UJ-ax1" firstAttribute="width" secondItem="Vdp-fd-J0q" secondAttribute="width" id="fbS-bt-aRE"/>
+                            <constraint firstItem="zxd-UJ-ax1" firstAttribute="centerX" secondItem="u2v-qu-mbu" secondAttribute="centerX" id="mAh-dG-yyk"/>
+                            <constraint firstItem="Vdp-fd-J0q" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.275362" id="mhf-Ki-5lg"/>
+                            <constraint firstItem="Vdp-fd-J0q" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0323661" id="sA9-f5-gkK"/>
+                            <constraint firstItem="gKp-aV-cdk" firstAttribute="width" secondItem="Vdp-fd-J0q" secondAttribute="width" id="sVF-7d-6i8"/>
+                            <constraint firstItem="gKp-aV-cdk" firstAttribute="top" secondItem="Vdp-fd-J0q" secondAttribute="bottom" constant="10" id="wDJ-5q-jWQ"/>
+                            <constraint firstItem="Vdp-fd-J0q" firstAttribute="centerX" secondItem="u2v-qu-mbu" secondAttribute="centerX" id="yDf-A6-QIs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ParamSlider1" destination="Vdp-fd-J0q" id="omB-KD-B6x"/>
+                        <outlet property="ParamSlider2" destination="gKp-aV-cdk" id="hqQ-fJ-KJ8"/>
+                        <outlet property="ParamSlider3" destination="2YE-TB-kqK" id="kPP-GX-h4V"/>
+                        <outlet property="ParamSlider4" destination="zxd-UJ-ax1" id="MFK-p1-SJA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

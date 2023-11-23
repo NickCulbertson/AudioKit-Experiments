@@ -8,6 +8,7 @@ import Controls
 import Tonic
 import MIDIKit
 import DunneAudioKit
+import SoundpipeAudioKit
 
 class InstrumentSFZConductor: ObservableObject, HasAudioEngine {
     let engine = AudioEngine()
