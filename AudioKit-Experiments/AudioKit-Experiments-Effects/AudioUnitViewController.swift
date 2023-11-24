@@ -37,22 +37,24 @@ public class AudioUnitViewController: AUViewController, AUAudioUnitFactory {
         super.viewDidLoad()
         
         ParamSlider1.minimumValue = 0.0
-        ParamSlider1.maximumValue = 1.0
+        ParamSlider1.maximumValue = 2.0
+        ParamSlider1.value = 0.0
         ParamSlider1.addTarget(self, action: #selector(self.slider1ValueDidChange(_:)), for: .valueChanged)
         
         ParamSlider2.minimumValue = 0.0
         ParamSlider2.maximumValue = 1.0
+        ParamSlider2.value = 0.0
         ParamSlider2.addTarget(self, action: #selector(self.slider1ValueDidChange(_:)), for: .valueChanged)
         
-        ParamSlider3.minimumValue = 12.0
-        ParamSlider3.maximumValue = 20000.0
+        ParamSlider3.minimumValue = 0.0
+        ParamSlider3.maximumValue = 1.0
+        ParamSlider3.value = 0.5
         ParamSlider3.addTarget(self, action: #selector(self.slider1ValueDidChange(_:)), for: .valueChanged)
         
-        ParamSlider4.minimumValue = 0.10
-        ParamSlider4.maximumValue = 10.0
+        ParamSlider4.minimumValue = 0.0
+        ParamSlider4.maximumValue = 1.0
+        ParamSlider4.value = 0.0
         ParamSlider4.addTarget(self, action: #selector(self.slider1ValueDidChange(_:)), for: .valueChanged)
-        
-        ParamSlider4.isHidden = true
         
         // Accessing the `audioUnit` parameter prompts the AU to be created via createAudioUnit(with:)
         guard let audioUnit = self.audioUnit else {
@@ -80,7 +82,7 @@ public class AudioUnitViewController: AUViewController, AUAudioUnitFactory {
     public func createAudioUnit(with componentDescription: AudioComponentDescription) throws -> AUAudioUnit {
         
         //It's Magic!
-        audioUnit = CostelloReverb(Mixer()).au
+        audioUnit = StereoDelay(Mixer()).au
         
         guard let audioUnit = self.audioUnit else {
             log.error("Unable to create AudioKit_Experiments_EffectsAudioUnit")
@@ -90,17 +92,10 @@ public class AudioUnitViewController: AUViewController, AUAudioUnitFactory {
         let paramTree = audioUnit.parameterTree
         
         
-//        for param in paramTree!.allParameters {
-////            param.value = param.value
-//            print("this is \(param.address)")
-//            AUParam1 = param
-//        }
-        
-        AUParam1 = paramTree!.value(forKey: "balance") as? AUParameter
+        AUParam1 = paramTree!.value(forKey: "time") as? AUParameter
         AUParam2 = paramTree!.value(forKey: "feedback") as? AUParameter
-        AUParam3 = paramTree!.value(forKey: "cutoffFrequency") as? AUParameter
-//        AUParam4 = paramTree!.value(forKey: "ringModBalanceDef") as? AUParameter
-//        ParamSlider4.isHidden = true
+        AUParam3 = paramTree!.value(forKey: "dryWetMix") as? AUParameter
+        AUParam4 = paramTree!.value(forKey: "pingPong") as? AUParameter
         
         self.observation = audioUnit.observe(\.allParameterValues, options: [.new]) { object, change in
             guard let tree = audioUnit.parameterTree else { return }
