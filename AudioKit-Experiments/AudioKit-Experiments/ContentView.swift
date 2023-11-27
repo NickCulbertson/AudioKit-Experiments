@@ -24,6 +24,7 @@ struct MasterView: View {
                 Group {
                     NavigationLink("10. Arpeggiator", destination: ArpeggiatorView())
                     NavigationLink("11. MIDI AUv3", destination: RandomMIDIView())
+                    NavigationLink("12. Effects AUv3", destination: AUv3EffectsView())
                 }
             }
         }.navigationBarTitle("AudioKit Experiments")

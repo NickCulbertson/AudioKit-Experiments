@@ -19,16 +19,31 @@ import CDunneAudioKit
 public class AudioUnitViewController: AUViewController, AUAudioUnitFactory {
     var audioUnit: AUAudioUnit?
     
-    @IBOutlet weak var ParamSlider1: UISlider!
-    @IBOutlet weak var ParamSlider2: UISlider!
-    @IBOutlet weak var ParamSlider3: UISlider!
-    @IBOutlet weak var ParamSlider4: UISlider!
+//    @IBOutlet weak var ParamSlider1: UISlider!
+//    @IBOutlet weak var ParamSlider2: UISlider!
+//    @IBOutlet weak var ParamSlider3: UISlider!
+//    @IBOutlet weak var ParamSlider4: UISlider!
+    @IBOutlet weak var Knob1: UIKitKnob!
+    @IBOutlet weak var Knob2: UIKitKnob!
+    @IBOutlet weak var Knob3: UIKitKnob!
+    @IBOutlet weak var Knob4: UIKitKnob!
+    @IBOutlet weak var Knob1Label: UILabel!
+    @IBOutlet weak var Knob2Label: UILabel!
+    @IBOutlet weak var Knob3Label: UILabel!
+    @IBOutlet weak var Knob4Label: UILabel!
     var AUParam1: AUParameter?
     var AUParam2: AUParameter?
     var AUParam3: AUParameter?
     var AUParam4: AUParameter?
     private var observation: NSKeyValueObservation?
 
+    var Knob1Updating = false
+    var Knob2Updating = false
+    var Knob3Updating = false
+    var Knob4Updating = false
+    
+    var firstRun = true
+        
 	deinit {
 	}
     
@@ -36,48 +51,75 @@ public class AudioUnitViewController: AUViewController, AUAudioUnitFactory {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        ParamSlider1.minimumValue = 0.0
-        ParamSlider1.maximumValue = 2.0
-        ParamSlider1.value = 0.0
-        ParamSlider1.addTarget(self, action: #selector(self.slider1ValueDidChange(_:)), for: .valueChanged)
+        Knob1.knobValue=0.05
+        Knob2.knobValue=0.0
+        Knob3.knobValue=0.5
+        Knob4.knobValue=0.0
+        Knob1.value=0.05
+        Knob2.value=0.0
+        Knob3.value=0.5
+        Knob4.value=0.0
         
-        ParamSlider2.minimumValue = 0.0
-        ParamSlider2.maximumValue = 1.0
-        ParamSlider2.value = 0.0
-        ParamSlider2.addTarget(self, action: #selector(self.slider1ValueDidChange(_:)), for: .valueChanged)
+        Knob1.callback = { value in
+            self.AUParam1?.value = AUValue(self.Knob1.value * 2.0)
+            DispatchQueue.main.async {
+                self.Knob1Label.text = String(format: " %.2f", self.Knob1.value * 2.0)
+            }
+        }
+        Knob1.callbackBool = { value in
+            
+            DispatchQueue.main.async {
+                        self.Knob1Label.text = "Delay"
+            }
+        }
+        Knob2.callback = { value in
+            
+            self.AUParam2?.value = AUValue(self.Knob2.value)
+            DispatchQueue.main.async {
+                self.Knob2Label.text = String(format: " %.2f", self.Knob2.value)
+            }
+        }
+        Knob2.callbackBool = { value in
+            DispatchQueue.main.async {
+                        self.Knob2Label.text = "Feedback"
+            }
+        }
+        Knob3.callback = { value in
+            
+            self.AUParam3?.value = AUValue(self.Knob3.value)
+            DispatchQueue.main.async {
+                self.Knob3Label.text = String(format: " %.2f", self.Knob3.value)
+            }
+        }
+        Knob3.callbackBool = { value in
+            DispatchQueue.main.async {
+                        self.Knob3Label.text = "Mix"
+            }
+        }
+        Knob4.callback = { value in
+            
+            self.AUParam4?.value = AUValue(self.Knob4.value)
+            DispatchQueue.main.async {
+                self.Knob4Label.text = String(format: " %.2f", self.Knob4.value)
+            }
+        }
+        Knob4.callbackBool = { value in
+            DispatchQueue.main.async {
+                        self.Knob4Label.text = "Stereo"
+            }
+        }
         
-        ParamSlider3.minimumValue = 0.0
-        ParamSlider3.maximumValue = 1.0
-        ParamSlider3.value = 0.5
-        ParamSlider3.addTarget(self, action: #selector(self.slider1ValueDidChange(_:)), for: .valueChanged)
         
-        ParamSlider4.minimumValue = 0.0
-        ParamSlider4.maximumValue = 1.0
-        ParamSlider4.value = 0.0
-        ParamSlider4.addTarget(self, action: #selector(self.slider1ValueDidChange(_:)), for: .valueChanged)
+        
+        
+        Knob1.presetKnobValue = Double(0.05)
+        Knob3.presetKnobValue = Double(0.5)
         
         // Accessing the `audioUnit` parameter prompts the AU to be created via createAudioUnit(with:)
         guard let audioUnit = self.audioUnit else {
             return
         }
     }
-    
-    @objc func slider1ValueDidChange(_ sender:UISlider!)
-    {
-        if sender.tag == 1 {
-            AUParam1?.value = self.ParamSlider1.value
-        }
-        if sender.tag == 2 {
-            AUParam2?.value = self.ParamSlider2.value
-        }
-        if sender.tag == 3 {
-            AUParam3?.value = self.ParamSlider3.value
-        }
-        if sender.tag == 4 {
-            AUParam4?.value = self.ParamSlider4.value
-        }
-    }
-    
     
     public func createAudioUnit(with componentDescription: AudioComponentDescription) throws -> AUAudioUnit {
         
@@ -91,7 +133,12 @@ public class AudioUnitViewController: AUViewController, AUAudioUnitFactory {
         
         let paramTree = audioUnit.parameterTree
         
+        guard paramTree != nil else {
+            log.error("Unable to access AU ParameterTree")
+            return audioUnit
+        }
         
+                
         AUParam1 = paramTree!.value(forKey: "time") as? AUParameter
         AUParam2 = paramTree!.value(forKey: "feedback") as? AUParameter
         AUParam3 = paramTree!.value(forKey: "dryWetMix") as? AUParameter
@@ -100,9 +147,21 @@ public class AudioUnitViewController: AUViewController, AUAudioUnitFactory {
         self.observation = audioUnit.observe(\.allParameterValues, options: [.new]) { object, change in
             guard let tree = audioUnit.parameterTree else { return }
             // This insures the Audio Unit gets initial values from the host.
-            
-            
             for param in tree.allParameters { param.value = param.value }
+            
+            
+            DispatchQueue.main.async {
+                
+                let val = AUValue(self.AUParam1?.value ?? 0)
+                let val2 = val * 0.5
+                self.Knob1.value = Double(val2)
+                
+                self.Knob2.value = Double(self.AUParam2?.value ?? 0)
+                
+                self.Knob3.value = Double(self.AUParam3?.value ?? 0)
+                
+                self.Knob4.value = Double(self.AUParam4?.value ?? 0)
+            }
         }
         
         parameterObserverToken =
@@ -112,33 +171,30 @@ public class AudioUnitViewController: AUViewController, AUAudioUnitFactory {
             if ([self.AUParam1?.address].contains(address)){
                 DispatchQueue.main.async {
                     Log("Update GUI")
-                    self.ParamSlider1.value = self.AUParam1?.value ?? 0
+                    let val = AUValue(self.AUParam1?.value ?? 0)
+                    let val2 = val * 0.5
+                    self.Knob1.value = Double(val2)
                 }
             }
             if ([self.AUParam2?.address].contains(address)){
                 DispatchQueue.main.async {
                     Log("Update GUI")
-                    self.ParamSlider2.value = self.AUParam2?.value ?? 0
+                    self.Knob2.value = Double(self.AUParam2?.value ?? 0)
                 }
             }
             if ([self.AUParam3?.address].contains(address)){
                 DispatchQueue.main.async {
                     Log("Update GUI")
-                    self.ParamSlider3.value = self.AUParam3?.value ?? 0
+                    self.Knob3.value = Double(self.AUParam3?.value ?? 0)
                 }
             }
             if ([self.AUParam4?.address].contains(address)){
                 DispatchQueue.main.async {
                     Log("Update GUI")
-                    self.ParamSlider4.value = self.AUParam4?.value ?? 0
+                    self.Knob4.value = Double(self.AUParam4?.value ?? 0)
                 }
             }
         })
-        
-        guard audioUnit.parameterTree != nil else {
-            log.error("Unable to access AU ParameterTree")
-            return audioUnit
-        }
         
         return audioUnit
     }

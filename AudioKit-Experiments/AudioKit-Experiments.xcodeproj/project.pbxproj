@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A12CC042B14F56600AA15F4 /* AUv3Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A12CC032B14F56600AA15F4 /* AUv3Effects.swift */; };
 		5A2B889E2AF1479100366695 /* AudioKit_ExperimentsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B889D2AF1479100366695 /* AudioKit_ExperimentsApp.swift */; };
 		5A2B88A02AF1479100366695 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B889F2AF1479100366695 /* ContentView.swift */; };
 		5A2B88A22AF1479200366695 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2B88A12AF1479200366695 /* Assets.xcassets */; };
@@ -27,6 +28,8 @@
 		5A8D754D2B0E83A5003D1249 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A8D754C2B0E83A5003D1249 /* MainInterface.storyboard */; };
 		5A8D75502B0E90D6003D1249 /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5A8D754F2B0E90D6003D1249 /* SoundpipeAudioKit */; };
 		5A8D75522B0E90E4003D1249 /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5A8D75512B0E90E4003D1249 /* SoundpipeAudioKit */; };
+		5A8D75542B1118F6003D1249 /* UIKitKnob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D75532B1118F6003D1249 /* UIKitKnob.swift */; };
+		5A8D75552B116D91003D1249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2B88A12AF1479200366695 /* Assets.xcassets */; };
 		5A99A6642B0D6B37003A2EFB /* AudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A99A6632B0D6B37003A2EFB /* AudioUnitViewController.swift */; };
 		5A99A6682B0D6B37003A2EFB /* AudioKit-Experiments-Effects.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5A99A6392B0D6B37003A2EFB /* AudioKit-Experiments-Effects.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5A99A6702B0D8824003A2EFB /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5A99A66F2B0D8824003A2EFB /* AudioKit */; };
@@ -113,6 +116,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5A12CC032B14F56600AA15F4 /* AUv3Effects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3Effects.swift; sourceTree = "<group>"; };
 		5A2B889A2AF1479100366695 /* AudioKit-Experiments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AudioKit-Experiments.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2B889D2AF1479100366695 /* AudioKit_ExperimentsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioKit_ExperimentsApp.swift; sourceTree = "<group>"; };
 		5A2B889F2AF1479100366695 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 		5A2B88DA2AF157D100366695 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		5A69866E2B0CDB0600E79380 /* RandomMIDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMIDI.swift; sourceTree = "<group>"; };
 		5A8D754C2B0E83A5003D1249 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		5A8D75532B1118F6003D1249 /* UIKitKnob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitKnob.swift; sourceTree = "<group>"; };
 		5A99A6392B0D6B37003A2EFB /* AudioKit-Experiments-Effects.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AudioKit-Experiments-Effects.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A99A6632B0D6B37003A2EFB /* AudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitViewController.swift; sourceTree = "<group>"; };
 		5A99A6652B0D6B37003A2EFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -301,6 +306,7 @@
 				5A99A6692B0D6B37003A2EFB /* AudioKit-Experiments-Effects.entitlements */,
 				5A8D754C2B0E83A5003D1249 /* MainInterface.storyboard */,
 				5A99A6632B0D6B37003A2EFB /* AudioUnitViewController.swift */,
+				5A8D75532B1118F6003D1249 /* UIKitKnob.swift */,
 				5A99A6652B0D6B37003A2EFB /* Info.plist */,
 			);
 			path = "AudioKit-Experiments-Effects";
@@ -321,6 +327,7 @@
 				5AD9485F2B05056800780DE2 /* PolyphonicSynth.swift */,
 				5AD948DA2B06A56F00780DE2 /* Arpeggiator.swift */,
 				5A69866E2B0CDB0600E79380 /* RandomMIDI.swift */,
+				5A12CC032B14F56600AA15F4 /* AUv3Effects.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -642,6 +649,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A8D75552B116D91003D1249 /* Assets.xcassets in Resources */,
 				5A8D754D2B0E83A5003D1249 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,6 +675,7 @@
 				5ACD758C2AF53E21000E0A0E /* NodeRecorder2.swift in Sources */,
 				5A69866F2B0CDB0600E79380 /* RandomMIDI.swift in Sources */,
 				5AD948DB2B06A56F00780DE2 /* Arpeggiator.swift in Sources */,
+				5A12CC042B14F56600AA15F4 /* AUv3Effects.swift in Sources */,
 				5A2B88A02AF1479100366695 /* ContentView.swift in Sources */,
 				5AD948602B05056800780DE2 /* PolyphonicSynth.swift in Sources */,
 				5A2B88D12AF1555100366695 /* SoundFont.swift in Sources */,
@@ -707,6 +716,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A8D75542B1118F6003D1249 /* UIKitKnob.swift in Sources */,
 				5A99A6642B0D6B37003A2EFB /* AudioUnitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
