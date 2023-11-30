@@ -1,5 +1,5 @@
 # AudioKit Experiments
-This project is a place to post my various AudioKit app experiments. I'm starting this for Codevember 2023, and hopefully it'll continue into the future. Feel free to use these examples however you like!
+This project is a place to post my various AudioKit app experiments. I'm starting this for Codevember 2023, and hopefully it'll continue into the future. Feel free to use these examples however you'd like!
 ## Current Examples
 (Click the image to watch AudioKit Experiments | Exploring 12 New Mini Projects)
 
