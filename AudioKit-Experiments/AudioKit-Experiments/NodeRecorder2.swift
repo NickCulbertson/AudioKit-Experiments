@@ -62,7 +62,7 @@ open class NodeRecorder2: NSObject {
 
     private var shouldCleanupRecordings: Bool
 
-    public var recordedFileURL: URL?
+    private var recordedFileURL: URL?
 
     public static var recordedFiles = [URL]()
 
