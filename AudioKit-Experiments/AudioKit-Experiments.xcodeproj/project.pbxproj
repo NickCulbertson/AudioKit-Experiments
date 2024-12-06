@@ -117,6 +117,7 @@
 
 /* Begin PBXFileReference section */
 		5A12CC032B14F56600AA15F4 /* AUv3Effects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3Effects.swift; sourceTree = "<group>"; };
+		5A1D40112D037B2F00410CA9 /* DunneAudioKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DunneAudioKit; sourceTree = "<group>"; };
 		5A2B889A2AF1479100366695 /* AudioKit-Experiments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AudioKit-Experiments.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2B889D2AF1479100366695 /* AudioKit_ExperimentsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioKit_ExperimentsApp.swift; sourceTree = "<group>"; };
 		5A2B889F2AF1479100366695 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -152,7 +153,6 @@
 		5AD948582B04F50500780DE2 /* InstrumentSFZ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentSFZ.swift; sourceTree = "<group>"; };
 		5AD9485D2B04F98900780DE2 /* ParameterRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterRow.swift; sourceTree = "<group>"; };
 		5AD9485F2B05056800780DE2 /* PolyphonicSynth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolyphonicSynth.swift; sourceTree = "<group>"; };
-		5AD9489D2B050B0200780DE2 /* DunneAudioKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DunneAudioKit; path = ../../../Downloads/DunneAudioKit; sourceTree = "<group>"; };
 		5AD948DA2B06A56F00780DE2 /* Arpeggiator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arpeggiator.swift; sourceTree = "<group>"; };
 		5AF8AA802B0BDB89005F3F10 /* AudioKit-Experiments-MIDI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AudioKit-Experiments-MIDI.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF8AA822B0BDB89005F3F10 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -232,7 +232,7 @@
 		5A2B88912AF1479100366695 = {
 			isa = PBXGroup;
 			children = (
-				5AD9489D2B050B0200780DE2 /* DunneAudioKit */,
+				5A1D40112D037B2F00410CA9 /* DunneAudioKit */,
 				5A2B88DA2AF157D100366695 /* Sounds */,
 				5A2B889C2AF1479100366695 /* AudioKit-Experiments */,
 				5A2B88AD2AF1479300366695 /* AudioKit-ExperimentsTests */,
